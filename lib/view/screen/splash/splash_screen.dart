@@ -10,7 +10,16 @@ class SplashScreen extends StatelessWidget {
     return GetBuilder<SplashScreenController>(
         init: SplashScreenController(),
         builder: (context) {
-          return SafeArea(child: Text("data"));
+          return Scaffold(
+            backgroundColor: Colors.grey,
+            body: Center(
+              child: Column(
+                children: [
+                  Image.asset("name"),
+                ],
+              ),
+            ),
+          );
         });
   }
 }
