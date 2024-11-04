@@ -5,6 +5,16 @@ class CommonButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox();
+    return InkWell(
+      onTap: () {},
+      child: Card(
+        color: Colors.white,
+        child: SizedBox(
+          height: 50,
+          width: MediaQuery.sizeOf(context).width,
+          child: Text("data"),
+        ),
+      ),
+    );
   }
 }
