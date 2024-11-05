@@ -23,7 +23,7 @@ class CommonText extends StatelessWidget {
       titel,
       style: TextStyle(
           color: fColor ?? Colors.white,
-          fontWeight: fWeight ?? FontWeight.bold,
+          fontWeight: fWeight ?? FontWeight.normal,
           fontSize: fSize ?? 15,
           overflow: overflow ?? TextOverflow.ellipsis),
       maxLines: maxLine ?? 1,
