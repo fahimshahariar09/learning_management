@@ -5,6 +5,15 @@ class CommonLoadingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Card(
+      child: SizedBox(
+        height: 50,
+        width: MediaQuery.sizeOf(context).width,
+        child: const CircularProgressIndicator(
+          backgroundColor: Colors.orange,
+          color: Colors.black,
+        ),
+      ),
+    );
   }
 }
