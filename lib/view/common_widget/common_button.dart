@@ -8,23 +8,25 @@ class CommonButton extends StatelessWidget {
       required this.buttonName,
       this.buttonHeight,
       this.buttonWidth,
-      this.buttonColor});
+      this.buttonColor,
+      this.textColor});
 
   final VoidCallback onTap;
   final String buttonName;
   final double? buttonHeight;
   final double? buttonWidth;
   final Color? buttonColor;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Card(
-        color: Colors.white,
+        color: buttonColor ?? Colors.white,
         child: SizedBox(
-          height: 50,
-          width: MediaQuery.sizeOf(context).width,
+          height: buttonHeight ?? 50,
+          width: buttonWidth ?? MediaQuery.sizeOf(context).width,
           child: CommonText(titel: buttonName),
         ),
       ),
