@@ -4,25 +4,29 @@ class CommonText extends StatelessWidget {
   const CommonText(
       {super.key,
       required this.titel,
-      this.color,
+      this.fColor,
       this.fWeight,
-      this.overflow});
+      this.overflow,
+      this.maxLine,
+      this.fSize});
 
   final String titel;
-  final Color? color;
+  final Color? fColor;
   final FontWeight? fWeight;
   final TextOverflow? overflow;
+  final double? fSize;
+  final int? maxLine;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      '',
+      titel,
       style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 15,
-          overflow: TextOverflow.ellipsis),
-      maxLines: 1,
+          color: fColor ?? Colors.white,
+          fontWeight: fWeight ?? FontWeight.bold,
+          fontSize: fSize ?? 15,
+          overflow: overflow ?? TextOverflow.ellipsis),
+      maxLines: maxLine ?? 1,
     );
   }
 }
