@@ -30,7 +30,7 @@ class CommonButton extends StatelessWidget {
           child: Center(
               child: CommonText(
             titel: buttonName,
-            fColor: textColor ?? Colors.grey,
+            fColor: textColor ?? Colors.black,
                 fWeight: FontWeight.w500,
           )),
         ),

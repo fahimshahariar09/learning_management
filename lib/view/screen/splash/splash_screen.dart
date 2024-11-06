@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/constant/images.dart';
 import 'package:learning_management/controller/ui_controller/splash/splash.dart';
+import 'package:learning_management/view/common_widget/common_button.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -12,13 +13,25 @@ class SplashScreen extends StatelessWidget {
         init: SplashScreenController(),
         builder: (context) {
           return Scaffold(
-            backgroundColor: Color(0xff32073F),
+            backgroundColor: const Color(0xff32073F),
             body: Center(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(AppImages.splash),
-                  SizedBox(height: 15),
-                  Text("Grow Your Soft Skill\nAnd\n Be More Creative",style: TextStyle(color: Colors.white),textAlign: TextAlign.center,)
+                  const SizedBox(height: 15),
+                  const Text(
+                    "Grow Your Soft Skill\nAnd\n Be More Creative",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                    SizedBox(height: 10),
+                  CommonButton(onTap: (){},buttonWidth: 200, buttonName: "Get Started"),
                 ],
               ),
             ),
