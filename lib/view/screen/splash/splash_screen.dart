@@ -14,25 +14,27 @@ class SplashScreen extends StatelessWidget {
         builder: (context) {
           return Scaffold(
             backgroundColor: const Color(0xff32073F),
-            body: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AppImages.splash),
-                  const SizedBox(height: 15),
-                  const Text(
-                    "Grow Your Soft Skill\nAnd\n Be More Creative",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400,
+            body: SafeArea(
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(AppImages.splash),
+                    const SizedBox(height: 15),
+                    const Text(
+                      "Grow Your Soft Skill\nAnd\n Be More Creative",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                    SizedBox(height: 10),
-                  CommonButton(onTap: (){},buttonWidth: 200, buttonName: "Get Started"),
-                ],
+                      const SizedBox(height: 10),
+                    CommonButton(onTap: (){},buttonWidth: 200, buttonName: "Get Started"),
+                  ],
+                ),
               ),
             ),
           );
