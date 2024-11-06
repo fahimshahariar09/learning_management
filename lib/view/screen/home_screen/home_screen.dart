@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:learning_management/view/common_widget/common_search_bar.dart';
+import 'package:learning_management/view/common_widget/common_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,6 +20,9 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             CommonSearchBar(),
+            SizedBox(height: 10),
+            CommonText(titel: "Popular Courses"),
+
           ],
         ),
       ),
