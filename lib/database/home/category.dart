@@ -4,7 +4,9 @@ class CategoryList {
       {"iamges": "", "name": "category"},
       {"iamges": "", "name": "Courses"},
       {"iamges": "", "name": "Reward"},
-      {"iamges": "", "name": ""},
+      {"iamges": "", "name": "Free Courses"},
+      {"iamges": "", "name": "BookStore"},
+      {"iamges": "", "name": "Quiz"},
     ]
   };
 }
