@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/constant/images.dart';
 import 'package:learning_management/controller/ui_controller/splash/splash.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -11,13 +12,13 @@ class SplashScreen extends StatelessWidget {
         init: SplashScreenController(),
         builder: (context) {
           return Scaffold(
-            backgroundColor: Colors.grey,
+            backgroundColor: Color(0xff32073F),
             body: Center(
               child: Column(
                 children: [
-                  Image.asset("name"),
+                  Image.asset(AppImages.splash),
                   SizedBox(height: 15),
-                  Text("data"),
+                  Text("Grow Your Soft Skill\nAnd\n Be More Creative",style: TextStyle(color: Colors.white),textAlign: TextAlign.center,)
                 ],
               ),
             ),
