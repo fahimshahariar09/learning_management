@@ -9,10 +9,13 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           ListTile(
-            leading: Icon(Icons.add),
+            leading: CircleAvatar(),
             title: Text("data"),
             subtitle: Text("data"),
-          )
+            trailing: Icon(Icons.add_alert_sharp),
+          ),
+          SizedBox(height: 10),
+          TextField(),
         ],
       ),
     );
