@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatelessWidget {
-  const PasswordTextField({super.key});
+  const PasswordTextField({super.key, required this.passwordController});
+
+  final TextEditingController passwordController;
+
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: passwordController,
       decoration: InputDecoration(
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
