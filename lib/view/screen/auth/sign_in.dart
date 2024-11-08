@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/auth/sign_in.dart';
+import 'package:learning_management/view/common_widget/common_button.dart';
 import 'package:learning_management/view/screen/auth/widget/email_text_field.dart';
 import 'package:learning_management/view/screen/auth/widget/password_text_field.dart';
 
@@ -14,13 +15,17 @@ class SignIn extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Column(
-            children: [
-              EmailTextField(emailController: controller.emailController),
-              SizedBox(height: 10),
-              PasswordTextField(passwordController: controller.passController),
-              SizedBox(height: 10),
-            ],
+          child: Form(
+            key: controller.formKey,
+            child: Column(
+              children: [
+                EmailTextField(emailController: controller.emailController),
+                const SizedBox(height: 10),
+                PasswordTextField(passwordController: controller.passController),
+                const SizedBox(height: 10),
+                CommonButton(onTap: (){}, buttonName: "Sign In"),
+              ],
+            ),
           ),
         ),
       ),
