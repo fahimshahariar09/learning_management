@@ -23,7 +23,11 @@ class SignIn extends StatelessWidget {
                 const SizedBox(height: 10),
                 PasswordTextField(passwordController: controller.passController),
                 const SizedBox(height: 10),
-                CommonButton(onTap: (){}, buttonName: "Sign In"),
+                CommonButton(onTap: (){
+                  if(!controller.formKey.currentState!.validate()){
+                    return;
+                  }
+                }, buttonName: "Sign In"),
               ],
             ),
           ),
