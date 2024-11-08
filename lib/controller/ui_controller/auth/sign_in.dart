@@ -9,7 +9,7 @@ class   SignInController extends GetxController{
   TextEditingController passController =TextEditingController();
   RxBool isLoading = true.obs;
 
-  signInService()async{
+  signInFun()async{
     isLoading.value=true;
     isLoading.value=false;
   }
