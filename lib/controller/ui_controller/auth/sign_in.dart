@@ -22,4 +22,11 @@ class SignInController extends GetxController {
     super.onInit();
   }
 
+  @override
+  void dispose() {
+    emailController.dispose();
+    passController.dispose();
+    super.dispose();
+  }
+
 }

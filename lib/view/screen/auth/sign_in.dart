@@ -4,6 +4,7 @@ import 'package:learning_management/controller/ui_controller/auth/sign_in.dart';
 import 'package:learning_management/view/common_widget/common_button.dart';
 import 'package:learning_management/view/screen/auth/widget/email_text_field.dart';
 import 'package:learning_management/view/screen/auth/widget/password_text_field.dart';
+import 'package:learning_management/view/screen/home_screen/home_screen.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -21,15 +22,19 @@ class SignIn extends StatelessWidget {
               children: [
                 EmailTextField(emailController: controller.emailController),
                 const SizedBox(height: 10),
-                PasswordTextField(passwordController: controller.passController),
+                PasswordTextField(
+                    passwordController: controller.passController),
                 const SizedBox(height: 10),
-                CommonButton(onTap: (){
-                  if(!controller.formKey.currentState!.validate()){
-                    return;
-                  }else{
-                    //Get.to(page);
-                  }
-                }, buttonName: "Sign In"),
+                CommonButton(
+                    onTap: () {
+                      if (!controller.formKey.currentState!.validate()) {
+                        return;
+                      } else {
+                        controller.signInFun();
+                        Get.to(HomeScreen());
+                      }
+                    },
+                    buttonName: "Sign In"),
               ],
             ),
           ),
