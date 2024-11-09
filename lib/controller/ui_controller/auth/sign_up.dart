@@ -12,7 +12,21 @@ class SignUpController extends GetxController {
   RxBool isLoading = true.obs;
 
   signupFun() async {
-    isLoading.value=true;
-    SignUpService.signUpService(name: nameController.text, email: emailController.text, password: passwordController.text, conpassword: conpasswordController.text);
+    isLoading.value = true;
+    SignUpService.signUpService(
+        name: nameController.text,
+        email: emailController.text,
+        password: passwordController.text,
+        conpassword: conpasswordController.text);
+    isLoading.value=false;
+  }
+
+  @override
+  void onInit() {
+    nameController.text="fahim";
+    emailController.text="fahim@gmail.com";
+    passwordController.text="123456";
+    conpasswordController.text="123456";
+    super.onInit();
   }
 }
