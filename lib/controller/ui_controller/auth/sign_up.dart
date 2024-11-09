@@ -18,15 +18,24 @@ class SignUpController extends GetxController {
         email: emailController.text,
         password: passwordController.text,
         conpassword: conpasswordController.text);
-    isLoading.value=false;
+    isLoading.value = false;
   }
 
   @override
   void onInit() {
-    nameController.text="fahim";
-    emailController.text="fahim@gmail.com";
-    passwordController.text="123456";
-    conpasswordController.text="123456";
+    nameController.text = "fahim";
+    emailController.text = "fahim@gmail.com";
+    passwordController.text = "123456";
+    conpasswordController.text = "123456";
     super.onInit();
+  }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    conpasswordController.dispose();
+    super.dispose();
   }
 }
