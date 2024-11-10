@@ -25,13 +25,20 @@ class SignIn extends StatelessWidget {
                 PasswordTextField(
                     passwordController: controller.passController),
                 const SizedBox(height: 10),
+                const Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text("Forget Password"),
+                  ],
+                ),
+                const SizedBox(height: 15),
                 CommonButton(
                     onTap: () {
                       if (!controller.formKey.currentState!.validate()) {
                         return;
                       } else {
                         controller.signInFun();
-                        Get.to(HomeScreen());
+                        Get.to(const HomeScreen());
                       }
                     },
                     buttonName: "Sign In"),
