@@ -14,16 +14,22 @@ class SignUp extends StatelessWidget {
     SignUpController controller =Get.put(SignUpController());
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            NameTextField(nameController: controller.nameController),
-            SizedBox(height: 15),
-            EmailTextField(emailController: controller.emailController),
-            SizedBox(height: 15),
-            PasswordTextField(passwordController: controller.passwordController),
-            SizedBox(height: 15),
-            ConPasswordField(conpasswordController: controller.conpasswordController),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Form(
+            key: controller.formKey,
+            child: Column(
+              children: [
+                NameTextField(nameController: controller.nameController),
+                const SizedBox(height: 15),
+                EmailTextField(emailController: controller.emailController),
+                const SizedBox(height: 15),
+                PasswordTextField(passwordController: controller.passwordController),
+                const SizedBox(height: 15),
+                ConPasswordField(conpasswordController: controller.conpasswordController),
+              ],
+            ),
+          ),
         ),
       ),
     );
