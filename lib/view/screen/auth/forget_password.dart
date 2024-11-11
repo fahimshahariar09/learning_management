@@ -8,17 +8,26 @@ class ForgetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ForgetPasswordController forgetController = Get.put(ForgetPasswordController());
-    return  Scaffold(
+    ForgetPasswordController forgetController =
+        Get.put(ForgetPasswordController());
+    return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               EmailTextField(emailController: forgetController.emailController),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                      height: 15, width: 100,
 
+                      child: Icon(Icons.arrow_forward)),
+                ],
+              ),
             ],
           ),
         ),
