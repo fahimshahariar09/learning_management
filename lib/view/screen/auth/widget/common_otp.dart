@@ -6,6 +6,16 @@ class CommonOtp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField();
+    return TextField(
+      decoration: InputDecoration(
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5)
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5)
+        ),
+        fillColor: Colors.grey,
+      ),
+    );
   }
 }
