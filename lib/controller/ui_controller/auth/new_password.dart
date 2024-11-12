@@ -16,4 +16,21 @@ class NewPasswordController extends GetxController {
         conpassword: conpassword.text);
     isLoading.value = false;
   }
+
+  @override
+  void onInit() {
+    oldpassword.text="123456";
+    newpassword.text="12345678";
+    conpassword.text="12345678";
+    super.onInit();
+  }
+
+  @override
+  void dispose() {
+    oldpassword.dispose();
+    newpassword.dispose();
+    conpassword.dispose();
+    super.dispose();
+  }
+
 }
