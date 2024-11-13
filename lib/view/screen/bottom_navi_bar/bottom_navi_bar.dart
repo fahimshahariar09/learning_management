@@ -28,6 +28,13 @@ class BottomNaviBar extends StatelessWidget {
               maxLine: 1,
               shadowElevation: 8,
               kBottomRadius: 20,
+              notchColor: Colors.orange,
+              removeMargins: false,
+              bottomBarWidth: MediaQuery.sizeOf(context).width,
+              showShadow: false,
+              durationInMilliSeconds: 300,
+              showBottomRadius: true,
+              itemLabelStyle: const TextStyle(fontSize: 15, color: Colors.black),
               bottomBarItems: [
                 buildBottomBarItem(icon: Icons.home, label: "home")
               ],
