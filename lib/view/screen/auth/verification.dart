@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/auth/otp.dart';
+import 'package:learning_management/view/common_widget/common_button.dart';
 import 'package:learning_management/view/screen/auth/widget/common_otp.dart';
 
 class Verification extends StatelessWidget {
@@ -26,7 +27,8 @@ class Verification extends StatelessWidget {
                   const SizedBox(width: 10),
                   CommonOtp(otpController: otpController.num3Controller),
                 ],
-              )
+              ),
+              CommonButton(onTap: (){}, buttonName: "Contiune")
             ],
           ),
         ),
