@@ -19,11 +19,11 @@ class Verification extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   CommonOtp(otpController: otpController.numController),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   CommonOtp(otpController: otpController.num1Controller),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   CommonOtp(otpController: otpController.num2Controller),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   CommonOtp(otpController: otpController.num3Controller),
                 ],
               )
