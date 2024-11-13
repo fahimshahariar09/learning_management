@@ -34,9 +34,11 @@ class BottomNaviBar extends StatelessWidget {
               showShadow: false,
               durationInMilliSeconds: 300,
               showBottomRadius: true,
-              itemLabelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+              itemLabelStyle:
+                  const TextStyle(fontSize: 15, color: Colors.black),
+              elevation: 1,
               bottomBarItems: [
-                buildBottomBarItem(icon: Icons.home, label: "home")
+                buildBottomBarItem(icon: Icons.home, label: "home"),
               ],
               onTap: (index) {},
               kIconSize: 15,
