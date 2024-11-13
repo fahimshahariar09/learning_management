@@ -23,10 +23,9 @@ class ForgetPassword extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                      height: 15, width: 100,
-                      decoration: const BoxDecoration(
-                        color: Colors.blue
-                      ),
+                      height: 15,
+                      width: 100,
+                      decoration: const BoxDecoration(color: Colors.blue),
                       child: const Icon(Icons.arrow_forward)),
                 ],
               ),
