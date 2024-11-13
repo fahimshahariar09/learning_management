@@ -1,3 +1,4 @@
+import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/bottom_navi_bar/bottom_navi_bar.dart';
@@ -16,6 +17,41 @@ class BottomNaviBar extends StatelessWidget {
         children: List.generate(bottomNaviBarController.bottomBarPage.length,
             (index) => bottomNaviBarController.bottomBarPage[index]),
       ),
+      extendBody: true,
+      bottomNavigationBar: (bottomNaviBarController.bottomBarPage.length <=
+              bottomNaviBarController.maxCount.value)
+          ? AnimatedNotchBottomBar(
+              notchBottomBarController: bottomNaviBarController.nController,
+              color: Colors.blue,
+              showLabel: true,
+              textOverflow: TextOverflow.ellipsis,
+              maxLine: 1,
+              shadowElevation: 8,
+              kBottomRadius: 20,
+              bottomBarItems: [
+                buildBottomBarItem(icon: Icons.home, label: "home")
+              ],
+              onTap: (index) {},
+              kIconSize: 15,
+            )
+          : null,
+    );
+  }
+
+  BottomBarItem buildBottomBarItem({
+    required IconData icon,
+    required String label,
+  }) {
+    return BottomBarItem(
+      inActiveItem: Icon(
+        icon,
+        color: Colors.white,
+      ),
+      activeItem: Icon(
+        icon,
+        color: Colors.black,
+      ),
+      itemLabel: label,
     );
   }
 }
