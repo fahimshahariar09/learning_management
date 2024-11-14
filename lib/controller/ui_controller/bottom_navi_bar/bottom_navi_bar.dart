@@ -1,6 +1,7 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/view/screen/add/add_to_cart.dart';
 import 'package:learning_management/view/screen/home_screen/home_screen.dart';
 
 class BottomNaviBarController extends GetxController{
@@ -17,7 +18,8 @@ class BottomNaviBarController extends GetxController{
   }
 
   RxList<Widget> bottomBarPage =[
-    HomeScreen(),
+    const HomeScreen(),
+    const AddToCart(),
   ].obs;
 
 }
