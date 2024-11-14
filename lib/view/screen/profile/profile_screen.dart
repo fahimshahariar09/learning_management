@@ -11,8 +11,14 @@ class ProfileScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
+              CircleAvatar(
+                radius: 30,
+              ),
+              SizedBox(height: 10),
               Text("data"),
+              SizedBox(height: 10),
               Text("data"),
+              SizedBox(height: 10),
               Text("data"),
             ],
           ),
