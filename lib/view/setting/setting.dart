@@ -12,6 +12,14 @@ class Setting extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Setting"),
       ),
+      body: const SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [],
+          ),
+        ),
+      ),
     );
   }
 }
