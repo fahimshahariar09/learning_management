@@ -13,4 +13,16 @@ class AppTheme{
       )
     )
   );
+
+  ThemeData darkTheme = ThemeData(
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        color: Colors.black,
+        fontWeight: FontWeight.w500,
+        fontSize: 25,
+      )
+    )
+  );
+
 }
