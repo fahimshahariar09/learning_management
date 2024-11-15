@@ -16,7 +16,13 @@ class Setting extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 15),
           child: Column(
-            children: [],
+            children: [
+              Row(
+                children: [
+                  Text("Dark & Mode"),
+                ],
+              )
+            ],
           ),
         ),
       ),
