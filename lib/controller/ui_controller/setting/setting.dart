@@ -18,6 +18,17 @@ class SettingController extends GetxController {
 
   changeLanguageFun(){
     String local ="en";
+    switch (selectedLanguage.value) {
+      case "BD":
+        local = "bn";
+        break;
+      case "India":
+        local = "hi";
+        break;
+      default:
+        local = "en";
+    }
+    Get.updateLocale(Locale(local));
   }
 
 }
