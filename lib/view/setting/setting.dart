@@ -7,19 +7,24 @@ class Setting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SettingController controller = Get.put(SettingController());
+    SettingController settingController = Get.put(SettingController());
     return Scaffold(
       appBar: AppBar(
         title: const Text("Setting"),
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
               Row(
                 children: [
-                  Text("Dark & Mode"),
+                  const Text("Dark & Mode"),
+                  Switch(
+                      value: settingController.isLightTheme.value,
+                      onChanged: (value) {
+                        settingController.changeThemeFun();
+                      })
                 ],
               )
             ],
