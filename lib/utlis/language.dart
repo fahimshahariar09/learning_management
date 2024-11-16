@@ -3,5 +3,9 @@ import 'package:get/get_navigation/src/root/internacionalization.dart';
 
 class AppLanguage extends Translations{
   @override
-    Map<String, Map<String, String>> get keys =>{};
+    Map<String, Map<String, String>> get keys =>{
+    "en_us": {"home_screen": "Home Screen", "profile": "Profile"},
+    "bn_BD": {"home_screen": "হোম স্ক্রীন", "profile": "প্রোফাইল"},
+  };
+
 }
