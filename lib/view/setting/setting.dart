@@ -29,7 +29,21 @@ class Setting extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 15),
-
+              Obx(()=>DropdownButton(
+                hint: const Text(
+                    'Please choose a location'), // Not necessary for Option 1
+                value: settingController.selectedLanguage.value,
+                onChanged: (newValue) {
+                  settingController.selectedLanguage.value = newValue!;
+                  settingController.changeLanguageFun();
+                },
+                items: settingController.languageList.map((location) {
+                  return DropdownMenuItem(
+                    value: location,
+                    child: Text(location),
+                  );
+                }).toList(),
+              ))
             ],
           ),
         ),
