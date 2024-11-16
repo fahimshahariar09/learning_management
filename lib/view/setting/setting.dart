@@ -17,6 +17,7 @@ class Setting extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
+              SizedBox(height: 10),
               Row(
                 children: [
                   const Text("Dark & Mode"),
@@ -26,7 +27,9 @@ class Setting extends StatelessWidget {
                         settingController.changeThemeFun();
                       })
                 ],
-              )
+              ),
+              SizedBox(height: 15),
+
             ],
           ),
         ),
