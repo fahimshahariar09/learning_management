@@ -6,10 +6,15 @@ class ProfileEdit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children: [
-          TextField(),
-        ],
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              TextField(),
+            ],
+          ),
+        ),
       ),
     );
   }
