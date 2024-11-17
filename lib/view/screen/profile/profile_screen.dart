@@ -15,7 +15,12 @@ class ProfileScreen extends StatelessWidget {
                 radius: 30,
               ),
               SizedBox(height: 10),
-              Text("data"),
+              Row(
+                children: [
+                  Text("data"),
+                  Text("data")
+                ],
+              ),
               SizedBox(height: 10),
               Text("data"),
               SizedBox(height: 10),
