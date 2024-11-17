@@ -21,7 +21,13 @@ class Setting extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text("Dark & Mode"),
+                  const Text(
+                    "Dark & Mode",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15,
+                    ),
+                  ),
                   Switch(
                       value: settingController.isLightTheme.value,
                       onChanged: (value) {
@@ -35,7 +41,10 @@ class Setting extends StatelessWidget {
                 children: [
                   const Text(
                     "Language",
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15,
+                    ),
                   ),
                   Obx(() => DropdownButton(
                         hint: const Text(
