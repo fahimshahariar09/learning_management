@@ -8,21 +8,24 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Rumi Aktar"),
-              subtitle: Text("Let’s learn something new"),
-              trailing: Icon(Icons.add_alert_sharp),
-            ),
-            SizedBox(height: 10),
-            CommonSearchBar(),
-            SizedBox(height: 10),
-            CommonText(titel: "Popular Courses"),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: SafeArea(
+          child: Column(
+            children: [
+              ListTile(
+                leading: CircleAvatar(),
+                title: Text("Rumi Aktar"),
+                subtitle: Text("Let’s learn something new"),
+                trailing: Icon(Icons.add_alert_sharp),
+              ),
+              SizedBox(height: 10),
+              CommonSearchBar(),
+              SizedBox(height: 10),
+              CommonText(titel: "Popular Courses"),
 
-          ],
+            ],
+          ),
         ),
       ),
     );
