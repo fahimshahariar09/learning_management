@@ -11,6 +11,7 @@ class Setting extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Setting"),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: Padding(
