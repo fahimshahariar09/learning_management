@@ -17,7 +17,7 @@ class Setting extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -29,26 +29,29 @@ class Setting extends StatelessWidget {
                       })
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Language"),
-                  Obx(()=>DropdownButton(
-                    hint: const Text(
-                        'Please choose a location'), // Not necessary for Option 1
-                    value: settingController.selectedLanguage.value,
-                    onChanged: (newValue) {
-                      settingController.selectedLanguage.value = newValue!;
-                      settingController.changeLanguageFun();
-                    },
-                    items: settingController.languageList.map((location) {
-                      return DropdownMenuItem(
-                        value: location,
-                        child: Text(location),
-                      );
-                    }).toList(),
-                  )),
+                  const Text(
+                    "Language",
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+                  ),
+                  Obx(() => DropdownButton(
+                        hint: const Text(
+                            'Please choose a location'), // Not necessary for Option 1
+                        value: settingController.selectedLanguage.value,
+                        onChanged: (newValue) {
+                          settingController.selectedLanguage.value = newValue!;
+                          settingController.changeLanguageFun();
+                        },
+                        items: settingController.languageList.map((location) {
+                          return DropdownMenuItem(
+                            value: location,
+                            child: Text(location),
+                          );
+                        }).toList(),
+                      )),
                 ],
               )
             ],
