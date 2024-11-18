@@ -22,7 +22,12 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 10),
               CommonSearchBar(),
               SizedBox(height: 10),
-              CommonText(titel: "Popular Courses"),
+              SizedBox(height: 10),
+              Column(
+                children: [
+                  CommonText(titel: "Popular Courses"),
+                ],
+              ),
 
             ],
           ),
