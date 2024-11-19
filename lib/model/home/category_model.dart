@@ -22,23 +22,20 @@ class CategoryModel {
 }
 
 class CategoryList {
-  String? image;
+  String? images;
   String? name;
-  String? price;
 
-  CategoryList({this.image, this.name, this.price});
+  CategoryList({this.images, this.name});
 
   CategoryList.fromJson(Map<String, dynamic> json) {
-    image = json['image'];
+    images = json['images'];
     name = json['name'];
-    price = json['price'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['image'] = image;
+    data['images'] = images;
     data['name'] = name;
-    data['price'] = price;
     return data;
   }
 }
