@@ -1,13 +1,12 @@
-
 class CategoryModel {
   List<CategoryList>? categorylist;
 
   CategoryModel({this.categorylist});
 
   CategoryModel.fromJson(Map<String, dynamic> json) {
-    if (json['addtocartShow'] != null) {
+    if (json['category'] != null) {
       categorylist = <CategoryList>[];
-      json['addtocartShow'].forEach((v) {
+      json['category'].forEach((v) {
         categorylist!.add(CategoryList.fromJson(v));
       });
     }
@@ -16,7 +15,7 @@ class CategoryModel {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (categorylist != null) {
-      data['addtocartShow'] = categorylist!.map((v) => v.toJson()).toList();
+      data['category'] = categorylist!.map((v) => v.toJson()).toList();
     }
     return data;
   }
