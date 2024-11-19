@@ -1,0 +1,3 @@
+class CoursesModel{
+  String? image;
+}

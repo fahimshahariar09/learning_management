@@ -1,5 +1,5 @@
-class CategoryList {
-  static Map<String, dynamic> categorylist = {
+class CoursesList {
+  static Map<String, dynamic> courseslist = {
     'category': [
       {"images": "asset/icon/category.png", "name": "Category"},
       {"images": "asset/icon/courses.png", "name": "Courses"},
