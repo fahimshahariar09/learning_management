@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:learning_management/database/home/courses.dart';
@@ -8,7 +9,10 @@ class CoursesService{
     try{
 
       List<CoursesModel> data =[];
-      for(var i in CoursesList.courseslist[""].toList()){}
+      for(var i in CoursesList.courseslist[""].toList()){
+        var decodeData =CoursesModel.formJson(jsonDecode(jsonEncode(i)));
+        data.add(decodeData);
+      }
 
     }catch(e){log("error $e");}
   return [];
