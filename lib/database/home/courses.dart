@@ -6,7 +6,7 @@ class CoursesList {
       {"images": "asset/image/ux_ui.png", "name": "UX/UI"},
       {"images": "asset/image/python.png", "name": "Python"},
       {"images": "asset/image/flutter.png", "name": "Flutter"},
-      {"images": "asset/icon/quiz.png", "name": "Quiz"}
+      {"images": "asset/image/node.png", "name": "Node js"}
     ]
   };
 }

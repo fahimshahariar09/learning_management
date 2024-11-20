@@ -1,7 +1,15 @@
 import 'dart:developer';
 
+import 'package:learning_management/database/home/courses.dart';
+import 'package:learning_management/model/home/courses_model.dart';
+
 class CoursesService{
   static Future coursesService()async{
-    try{}catch(e){log("error $e");}
+    try{
+
+      List<CoursesModel> data =[];
+      for(var i in CoursesList.courseslist[""].toList()){}
+
+    }catch(e){log("error $e");}
   }
 }
