@@ -2,5 +2,7 @@ class CoursesModel {
   String? image;
   String? name;
 
-  CoursesModel({required this.image, required this.name});
+  CoursesModel({this.image, this.name});
+
+  CoursesModel.formJson(Map<String,dynamic> json){}
 }
