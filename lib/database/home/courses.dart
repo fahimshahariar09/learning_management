@@ -1,11 +1,11 @@
 class CoursesList {
   static Map<String, dynamic> courseslist = {
     'category': [
-      {"images": "asset/icon/category.png", "name": "Category"},
-      {"images": "asset/icon/courses.png", "name": "Courses"},
-      {"images": "asset/icon/reword.png", "name": "Reward"},
-      {"images": "asset/icon/free_courses.png", "name": "Free Courses"},
-      {"images": "asset/icon/book.png", "name": "BookStore"},
+      {"images": "asset/image/asset/image/java.png.png", "name": "Java"},
+      {"images": "asset/image/react.png", "name": "React"},
+      {"images": "asset/image/ux_ui.png", "name": "UX/UI"},
+      {"images": "asset/image/python.png", "name": "Python"},
+      {"images": "asset/image/flutter.png", "name": "Flutter"},
       {"images": "asset/icon/quiz.png", "name": "Quiz"}
     ]
   };
