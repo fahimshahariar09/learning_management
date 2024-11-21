@@ -7,14 +7,13 @@ import 'package:learning_management/model/home/courses_model.dart';
 
 class HomeController extends GetxController {
   RxBool isLoading = true.obs;
-  List<CoursesModel> coursesList=[];
-  List<CategoryModel> categoryList=[];
+  List<CoursesModel> coursesList = [];
+  List<CategoryModel> categoryList = [];
 
-
-  coursesFun()async{
-    isLoading.value=true;
-    coursesList =await CoursesService.coursesService();
-    isLoading.value=false;
+  coursesFun() async {
+    isLoading.value = true;
+    coursesList = await CoursesService.coursesService();
+    isLoading.value = false;
   }
 
   categoryFun() async {
@@ -26,7 +25,7 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     categoryFun();
+    coursesFun();
     super.onInit();
   }
-
 }

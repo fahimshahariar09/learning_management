@@ -7,7 +7,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: SafeArea(
@@ -22,13 +22,24 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 10),
               CommonSearchBar(),
               SizedBox(height: 10),
+              GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                ),
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+
+                    ],
+                  );
+                },
+              ),
               SizedBox(height: 10),
               Column(
                 children: [
                   CommonText(titel: "Popular Courses"),
                 ],
               ),
-
             ],
           ),
         ),
