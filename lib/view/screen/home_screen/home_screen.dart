@@ -22,17 +22,20 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 10),
               CommonSearchBar(),
               SizedBox(height: 10),
-              GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
+              Expanded(
+                child: GridView.builder(
+                  itemCount: 6,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                  ),
+                  itemBuilder: (context, index) {
+                    return Column(
+                      children: [
+                        Text("data"),
+                      ],
+                    );
+                  },
                 ),
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-
-                    ],
-                  );
-                },
               ),
               SizedBox(height: 10),
               Column(
