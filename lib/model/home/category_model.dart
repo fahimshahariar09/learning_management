@@ -1,10 +1,10 @@
-class CategoryList {
+class CategoryModel {
   String? images;
   String? name;
 
-  CategoryList({this.images, this.name});
+  CategoryModel({this.images, this.name});
 
-  CategoryList.fromJson(Map<String, dynamic> json) {
+  CategoryModel.fromJson(Map<String, dynamic> json) {
     images = json['images'];
     name = json['name'];
   }
