@@ -9,7 +9,7 @@ class CoursesService{
     try{
 
       List<CoursesModel> data =[];
-      for(var i in CoursesList.courseslist[""].toList()){
+      for(var i in CoursesList.courseslist["courses"].toList()){
         var decodeData =CoursesModel.formJson(jsonDecode(jsonEncode(i)));
         data.add(decodeData);
       }
