@@ -41,6 +41,22 @@ class HomeScreen extends StatelessWidget {
               Column(
                 children: [
                   CommonText(titel: "Popular Courses"),
+                  SizedBox(height: 15),
+                  Expanded(
+                    child: GridView.builder(
+                      itemCount: 6,
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Column(
+                          children: [
+                            Text("data"),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ],
