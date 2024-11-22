@@ -6,10 +6,14 @@ class HomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Column(
-        children: [
+      child: SizedBox(
+        height: 100,
+        width: 150,
+        child: Column(
+          children: [
 
-        ],
+          ],
+        ),
       ),
     );
   }
