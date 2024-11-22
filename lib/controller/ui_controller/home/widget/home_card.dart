@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HomeCard extends StatelessWidget {
-  const HomeCard({super.key});
+  const HomeCard({super.key, this.image, this.name});
+
+  final String? image;
+  final String? name;
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +18,9 @@ class HomeCard extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Image.asset(""),
-            SizedBox(width: 20),
-            Text("data"),
+            Image.asset("$image"),
+            const SizedBox(width: 20),
+            const Text("data"),
           ],
         ),
       ),
