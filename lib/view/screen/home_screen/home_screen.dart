@@ -9,19 +9,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SafeArea(
           child: Column(
             children: [
-              ListTile(
+              const ListTile(
                 leading: CircleAvatar(),
                 title: Text("Rumi Aktar"),
                 subtitle: Text("Let’s learn something new"),
                 trailing: Icon(Icons.add_alert_sharp),
               ),
-              SizedBox(height: 10),
-              CommonSearchBar(),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
+              const CommonSearchBar(),
+              const SizedBox(height: 10),
               Expanded(
                 child: GridView.builder(
                   itemCount: 6,
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                     crossAxisCount: 3,
                   ),
                   itemBuilder: (context, index) {
-                    return Column(
+                    return const Column(
                       children: [
                         Text("data"),
                       ],
@@ -37,11 +37,11 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Column(
                 children: [
-                  CommonText(titel: "Popular Courses"),
-                  SizedBox(height: 15),
+                  const CommonText(titel: "Popular Courses"),
+                  const SizedBox(height: 15),
                   Expanded(
                     child: GridView.builder(
                       itemCount: 6,
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                         crossAxisCount: 3,
                       ),
                       itemBuilder: (context, index) {
-                        return Column(
+                        return const Column(
                           children: [
                             Text("data"),
                           ],
