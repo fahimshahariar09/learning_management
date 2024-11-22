@@ -9,9 +9,16 @@ class HomeCard extends StatelessWidget {
       child: Container(
         height: 100,
         width: 150,
-        decoration: const BoxDecoration(color: Colors.red),
-        child: const Column(
-          children: [],
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.red,
+        ),
+        child: Row(
+          children: [
+            Image.asset(""),
+            SizedBox(width: 20),
+            Text("data"),
+          ],
         ),
       ),
     );
