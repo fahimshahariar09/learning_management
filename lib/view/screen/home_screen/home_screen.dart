@@ -55,13 +55,16 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              CommonText(titel: "Popular Courses",fColor: Colors.red),
+              const Row(
+                children: [
+                  CommonText(titel: "Popular Courses"),
+                ],
+              ),
               const SizedBox(height: 15),
               Expanded(
                 child: GridView.builder(
                   itemCount: 6,
-                  gridDelegate:
-                      const SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                   ),
                   itemBuilder: (context, index) {
