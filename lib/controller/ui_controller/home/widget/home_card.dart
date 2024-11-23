@@ -15,7 +15,7 @@ class HomeCard extends StatelessWidget {
     return Card(
       child: Container(
         height: 100,
-        width: 150,
+        width: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: Colors.red,
