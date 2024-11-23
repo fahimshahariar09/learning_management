@@ -30,57 +30,48 @@ class HomeScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-                      ListTile(
-                        leading: CircleAvatar(),
-                        title: Text("Rumi Aktar"),
-                        subtitle: Text("Let’s learn something new"),
-                        trailing: Icon(Icons.add_alert_sharp),
-                      ),
-                      const SizedBox(height: 10),
-                      const CommonSearchBar(),
+              const ListTile(
+                leading: CircleAvatar(),
+                title: Text("Rumi Aktar"),
+                subtitle: Text("Let’s learn something new"),
+                trailing: Icon(Icons.add_alert_sharp),
+              ),
+              const SizedBox(height: 10),
+              const CommonSearchBar(),
               const SizedBox(height: 10),
               Expanded(
-                child: Column(
-                  children: [
-                    GridView.builder(
-                      itemCount: 6,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                      ),
-                      itemBuilder: (context, index) {
-                        return const Column(
-                          children: [
-                            Text("data"),
-                          ],
-                        );
-                      },
-                    ),
-                  ],
+                child: GridView.builder(
+                  itemCount: 6,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                  ),
+                  itemBuilder: (context, index) {
+                    return const Column(
+                      children: [
+                        Text("data"),
+                      ],
+                    );
+                  },
                 ),
               ),
               const SizedBox(height: 10),
-              Column(
-                children: [
-                  const CommonText(titel: "Popular Courses"),
-                  const SizedBox(height: 15),
-                  Expanded(
-                    child: GridView.builder(
-                      itemCount: 6,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                      ),
-                      itemBuilder: (context, index) {
-                        return const Column(
-                          children: [
-                            Text("data"),
-                          ],
-                        );
-                      },
-                    ),
+              CommonText(titel: "Popular Courses",fColor: Colors.red),
+              const SizedBox(height: 15),
+              Expanded(
+                child: GridView.builder(
+                  itemCount: 6,
+                  gridDelegate:
+                      const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
                   ),
-                ],
+                  itemBuilder: (context, index) {
+                    return const Column(
+                      children: [
+                        Text("data"),
+                      ],
+                    );
+                  },
+                ),
               ),
             ],
           ),
