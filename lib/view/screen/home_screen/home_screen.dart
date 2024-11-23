@@ -8,32 +8,44 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Column(
-          children: [
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Rumi Aktar"),
-              subtitle: Text("Let’s learn something new"),
-              trailing: Icon(Icons.add_alert_sharp),
-            ),
-            const SizedBox(height: 10),
-            const CommonSearchBar(),
-          ],
-        ),
-      ),
+      // appBar: AppBar(
+      //   title: SizedBox(
+      //     height: 100,
+      //     child: Column(
+      //       children: [
+      //         ListTile(
+      //           leading: CircleAvatar(),
+      //           title: Text("Rumi Aktar"),
+      //           subtitle: Text("Let’s learn something new"),
+      //           trailing: Icon(Icons.add_alert_sharp),
+      //         ),
+      //         const SizedBox(height: 10),
+      //         const CommonSearchBar(),
+      //       ],
+      //     ),
+      //   ),
+      // ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SafeArea(
           child: Column(
             children: [
+                      ListTile(
+                        leading: CircleAvatar(),
+                        title: Text("Rumi Aktar"),
+                        subtitle: Text("Let’s learn something new"),
+                        trailing: Icon(Icons.add_alert_sharp),
+                      ),
+                      const SizedBox(height: 10),
+                      const CommonSearchBar(),
               const SizedBox(height: 10),
               Expanded(
                 child: Column(
                   children: [
                     GridView.builder(
                       itemCount: 6,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                       ),
                       itemBuilder: (context, index) {
