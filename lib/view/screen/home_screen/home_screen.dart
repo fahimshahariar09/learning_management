@@ -8,23 +8,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: SizedBox(
-      //     height: 100,
-      //     child: Column(
-      //       children: [
-      //         ListTile(
-      //           leading: CircleAvatar(),
-      //           title: Text("Rumi Aktar"),
-      //           subtitle: Text("Let’s learn something new"),
-      //           trailing: Icon(Icons.add_alert_sharp),
-      //         ),
-      //         const SizedBox(height: 10),
-      //         const CommonSearchBar(),
-      //       ],
-      //     ),
-      //   ),
-      // ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SafeArea(
@@ -38,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               const CommonSearchBar(),
-              const SizedBox(height: 10),
+              const SizedBox(height: 15),
               Expanded(
                 child: GridView.builder(
                   itemCount: 6,
@@ -54,13 +37,12 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-              const SizedBox(height: 10),
               const Row(
                 children: [
                   CommonText(titel: "Popular Courses"),
                 ],
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 20),
               Expanded(
                 child: GridView.builder(
                   itemCount: 6,
