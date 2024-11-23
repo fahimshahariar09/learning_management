@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:learning_management/controller/ui_controller/home/home.dart';
 import 'package:learning_management/view/common_widget/common_search_bar.dart';
 import 'package:learning_management/view/common_widget/common_text.dart';
 
@@ -7,6 +9,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    HomeController homeController = Get.put(HomeController());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
