@@ -6,18 +6,33 @@ class Book extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
-          ListTile(
+          const ListTile(
             leading: CircleAvatar(),
             title: Text("Rumi"),
             subtitle: Text("Let's learn"),
           ),
-          SizedBox(height: 10),
-          CommonSearchBar(),
-          SizedBox(height: 10),
-          Text("Top Mentor"),
+          const SizedBox(height: 10),
+          const CommonSearchBar(),
+          const SizedBox(height: 10),
+          const Text("Top Mentor"),
+          Expanded(
+            child: GridView.builder(
+              itemCount: 6,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+              ),
+              itemBuilder: (context, index) {
+                return const Column(
+                  children: [
+                    Text("data"),
+                  ],
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
