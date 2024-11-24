@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/view/common_widget/common_search_bar.dart';
 
 class Book extends StatelessWidget {
   const Book({super.key});
@@ -12,7 +13,10 @@ class Book extends StatelessWidget {
             leading: CircleAvatar(),
             title: Text("Rumi"),
             subtitle: Text("Let's learn"),
-          )
+          ),
+          SizedBox(height: 10),
+          CommonSearchBar(),
+          SizedBox(height: 10),
         ],
       ),
     );
