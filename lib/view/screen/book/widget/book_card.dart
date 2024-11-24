@@ -14,7 +14,10 @@ class BookCard extends StatelessWidget {
           ),
           child: Column(
             children: [
-
+              Image.asset("name"),
+              Text("data"),
+              Text("data"),
+              Icon(Icons.star,size: 5,),
             ],
           )),
     );
