@@ -8,7 +8,11 @@ class Book extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-
+          ListTile(
+            leading: CircleAvatar(),
+            title: Text("Rumi"),
+            subtitle: Text("Let's learn"),
+          )
         ],
       ),
     );
