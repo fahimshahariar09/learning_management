@@ -6,7 +6,7 @@ class Book extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [
           ListTile(
@@ -17,6 +17,7 @@ class Book extends StatelessWidget {
           SizedBox(height: 10),
           CommonSearchBar(),
           SizedBox(height: 10),
+          Text("Top Mentor"),
         ],
       ),
     );
