@@ -1,3 +1,11 @@
 class BookList{
-  static Map<String,dynamic> booklist ={};
+  static Map<String,dynamic> bookList ={
+    "booklist" : [
+      {
+        "image" :"",
+        "name" :"",
+        "titel" :""
+      }
+    ]
+  };
 }
