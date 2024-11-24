@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class BookCard extends StatelessWidget {
-  const BookCard({super.key});
+  const BookCard(
+      {super.key,
+      required this.image,
+      required this.name,
+      required this.titel});
+
+  final String image;
+  final String name;
+  final String titel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +22,13 @@ class BookCard extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Image.asset("name"),
-              Text("data"),
-              Text("data"),
-              Icon(Icons.star,size: 5,),
+              Image.asset(image),
+              Text(name),
+              Text(titel),
+              Icon(
+                Icons.star,
+                size: 5,
+              ),
             ],
           )),
     );
