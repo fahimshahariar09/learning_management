@@ -1,5 +1,5 @@
-class BookList{
-  static Map<String,dynamic> bookList ={
+class TopMentorList{
+  static Map<String,dynamic> tomentorList ={
     "booklist" : [
       {
         "image" :"",
