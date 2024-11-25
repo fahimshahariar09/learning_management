@@ -1,5 +1,14 @@
 class MentorModel{
   String? image;
   String? name;
-  String? titel;
+  String? subtitel;
+
+  MentorModel({this.image,this.name,this.subtitel});
+
+  MentorModel.formJson(Map<String,dynamic> json){
+    image=json["image"];
+    name=json["name"];
+    subtitel=json["subtitel"];
+  }
+
 }
