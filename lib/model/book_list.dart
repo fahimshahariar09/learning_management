@@ -5,6 +5,10 @@ class BookListModel{
 
   BookListModel({this.image,this.name,this.titel});
 
-  BookListModel.formJson(Map<String,dynamic> json){}
+  BookListModel.formJson(Map<String,dynamic> json){
+    image =json['image'];
+    name =json['name'];
+    titel =json['titel'];
+  }
 
 }
