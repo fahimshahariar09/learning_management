@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/home/home.dart';
 import 'package:learning_management/view/common_widget/common_search_bar.dart';
 import 'package:learning_management/view/common_widget/common_text.dart';
+import 'package:learning_management/view/screen/home_screen/widget/home_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -51,16 +52,15 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
               Expanded(
                 child: GridView.builder(
-                  itemCount: 6,
+                  itemCount: homeController.coursesList.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                   ),
                   itemBuilder: (context, index) {
-                    return const Column(
-                      children: [
-                        Text("data"),
-                      ],
-                    );
+                    return HomeCard(
+                        image: "${homeController.coursesList[index].image}",
+                        name: "${homeController.coursesList[index].image}",
+                        tk: "${homeController.coursesList[index].image}");
                   },
                 ),
               ),
