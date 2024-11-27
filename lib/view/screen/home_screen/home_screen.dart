@@ -26,24 +26,28 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 10),
               const CommonSearchBar(),
               const SizedBox(height: 15),
-              Expanded(
-                child: GridView.builder(
-                  itemCount: homeController.categoryList.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                  ),
-                  itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Image.asset(
-                            "${homeController.categoryList[index].images}"),
-                        const SizedBox(height: 5),
-                        Text("${homeController.categoryList[index].name}"),
-                      ],
-                    );
-                  },
-                ),
-              ),
+              Obx(() => homeController.isLoading.isFalse
+                  ? Expanded(
+                      child: GridView.builder(
+                        itemCount: homeController.categoryList.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 3,
+                        ),
+                        itemBuilder: (context, index) {
+                          return Column(
+                            children: [
+                              Image.asset(
+                                  "${homeController.categoryList[index].images}"),
+                              const SizedBox(height: 5),
+                              Text(
+                                  "${homeController.categoryList[index].name}"),
+                            ],
+                          );
+                        },
+                      ),
+                    )
+                  : CircularProgressIndicator()),
               const Row(
                 children: [
                   CommonText(titel: "Popular Courses"),
@@ -51,21 +55,25 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Obx(
-                () => Expanded(
-                  child: GridView.builder(
-                    itemCount: homeController.coursesList.length,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                    ),
-                    itemBuilder: (context, index) {
-                      return HomeCard(
-                          image: "${homeController.coursesList[index].image}",
-                          name: "${homeController.coursesList[index].name}",
-                          tk: "${homeController.coursesList[index].tk}");
-                    },
-                  ),
-                ),
+                () => homeController.isLoading.isFalse
+                    ? Expanded(
+                        child: GridView.builder(
+                          itemCount: homeController.coursesList.length,
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                          ),
+                          itemBuilder: (context, index) {
+                            return HomeCard(
+                                image:
+                                    "${homeController.coursesList[index].image}",
+                                name:
+                                    "${homeController.coursesList[index].name}",
+                                tk: "${homeController.coursesList[index].tk}");
+                          },
+                        ),
+                      )
+                    : CircularProgressIndicator(),
               )
             ],
           ),
