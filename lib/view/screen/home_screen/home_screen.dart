@@ -50,20 +50,23 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
-              Expanded(
-                child: GridView.builder(
-                  itemCount: homeController.coursesList.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
+              Obx(
+                () => Expanded(
+                  child: GridView.builder(
+                    itemCount: homeController.coursesList.length,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                    ),
+                    itemBuilder: (context, index) {
+                      return HomeCard(
+                          image: "${homeController.coursesList[index].image}",
+                          name: "${homeController.coursesList[index].name}",
+                          tk: "${homeController.coursesList[index].tk}");
+                    },
                   ),
-                  itemBuilder: (context, index) {
-                    return HomeCard(
-                        image: "${homeController.coursesList[index].image}",
-                        name: "${homeController.coursesList[index].name}",
-                        tk: "${homeController.coursesList[index]}");
-                  },
                 ),
-              ),
+              )
             ],
           ),
         ),
