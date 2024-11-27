@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 15),
               Expanded(
                 child: GridView.builder(
-                  itemCount: 6,
+                  itemCount: homeController.categoryList.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                   ),
