@@ -36,6 +36,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Image.asset(
                             "${homeController.categoryList[index].images}"),
+                        const SizedBox(height: 5),
                         Text("${homeController.categoryList[index].name}"),
                       ],
                     );
