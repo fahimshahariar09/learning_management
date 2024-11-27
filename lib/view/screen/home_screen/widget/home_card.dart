@@ -5,10 +5,12 @@ class HomeCard extends StatelessWidget {
     super.key,
     required this.image,
     required this.name,
+    required this.tk,
   });
 
   final String image;
   final String name;
+  final String tk;
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +22,16 @@ class HomeCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
           color: Colors.red,
         ),
-        child: Row(
+        child: Column(
           children: [
-            Image.asset(image),
-            const SizedBox(width: 20),
-             Text(name),
+            Row(
+              children: [
+                Image.asset(image),
+                const SizedBox(width: 20),
+                Text(name),
+              ],
+            ),
+            Text(tk),
           ],
         ),
       ),

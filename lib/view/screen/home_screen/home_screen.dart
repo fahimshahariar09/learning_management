@@ -32,10 +32,11 @@ class HomeScreen extends StatelessWidget {
                     crossAxisCount: 3,
                   ),
                   itemBuilder: (context, index) {
-                    return  Column(
+                    return Column(
                       children: [
-                        Image.asset("${homeController.categoryList[index].images}"),
-                        Text("data"),
+                        Image.asset(
+                            "${homeController.categoryList[index].images}"),
+                        Text("${homeController.categoryList[index].name}"),
                       ],
                     );
                   },
