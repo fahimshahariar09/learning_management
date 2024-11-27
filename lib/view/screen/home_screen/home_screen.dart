@@ -54,13 +54,13 @@ class HomeScreen extends StatelessWidget {
                 child: GridView.builder(
                   itemCount: homeController.coursesList.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                   ),
                   itemBuilder: (context, index) {
                     return HomeCard(
                         image: "${homeController.coursesList[index].image}",
-                        name: "${homeController.coursesList[index].image}",
-                        tk: "${homeController.coursesList[index].image}");
+                        name: "${homeController.coursesList[index].name}",
+                        tk: "${homeController.coursesList[index]}");
                   },
                 ),
               ),
