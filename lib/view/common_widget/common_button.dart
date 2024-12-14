@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/view/common_widget/common_text.dart';
+import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 
 class CommonButton extends StatelessWidget {
   const CommonButton({
@@ -26,11 +26,11 @@ class CommonButton extends StatelessWidget {
             height: 30,
             width: buttonWidth ?? MediaQuery.sizeOf(context).width,
             child: Center(
-                child: CommonText(
-              titel: text,
-              fColor: Colors.black,
-              fSize: 20,
-              fWeight: FontWeight.w500,
+                child: CustomTextWidget(
+              text: text,
+              fontColor: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
             )),
           ),
         ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/home/home.dart';
 import 'package:learning_management/view/common_widget/common_search_bar.dart';
-import 'package:learning_management/view/common_widget/common_text.dart';
+import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 import 'package:learning_management/view/screen/home_screen/widget/home_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                   : const CircularProgressIndicator()),
               const Row(
                 children: [
-                  CommonText(titel: "Popular Courses"),
+                  CustomTextWidget(titel: "Popular Courses"),
                 ],
               ),
               const SizedBox(height: 20),
