@@ -6,16 +6,12 @@ class CommonButton extends StatelessWidget {
       {super.key,
       required this.onTap,
       required this.buttonName,
-      this.buttonHeight,
       this.buttonWidth,
-      this.buttonColor,
       this.textColor});
 
   final VoidCallback onTap;
   final String buttonName;
-  final double? buttonHeight;
   final double? buttonWidth;
-  final Color? buttonColor;
   final Color? textColor;
 
   @override
@@ -23,9 +19,10 @@ class CommonButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Card(
-        color: buttonColor ?? Colors.white,
+        margin: const EdgeInsets.symmetric(horizontal: 5,vertical: 15),
+        color: Colors.white,
         child: SizedBox(
-          height: buttonHeight ?? 50,
+          height: 30,
           width: buttonWidth ?? MediaQuery.sizeOf(context).width,
           child: Center(
               child: CommonText(

@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                         },
                       ),
                     )
-                  : CircularProgressIndicator()),
+                  : const CircularProgressIndicator()),
               const Row(
                 children: [
                   CommonText(titel: "Popular Courses"),
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                       )
-                    : CircularProgressIndicator(),
+                    : const CircularProgressIndicator(),
               )
             ],
           ),
