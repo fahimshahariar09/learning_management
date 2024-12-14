@@ -3,19 +3,23 @@ import 'package:flutter/material.dart';
 class CommonText extends StatelessWidget {
   const CommonText(
       {super.key,
-      required this.titel,
-      this.fColor,
-      this.fWeight,
+      required this.text,
+      this.fontColor,
+      this.fontWeight,
       this.overflow,
       this.maxLine,
-      this.fSize});
+      this.fontSize,
+      this.textAlign,
+      this.fontFamily});
 
-  final String titel;
-  final Color? fColor;
-  final FontWeight? fWeight;
+  final String text;
+  final Color? fontColor;
+  final FontWeight? fontWeight;
   final TextOverflow? overflow;
-  final double? fSize;
+  final double? fontSize;
   final int? maxLine;
+  final TextAlign? textAlign;
+  final String? fontFamily;
 
   @override
   Widget build(BuildContext context) {
