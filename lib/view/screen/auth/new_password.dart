@@ -22,7 +22,7 @@ class NewPassword extends StatelessWidget {
               const SizedBox(height: 10),
               PasswordTextField(passwordController: controller.conpassword),
               const SizedBox(height: 10),
-              CustomButton(onTap: (){}, buttonName: "Save"),
+              CustomButton(onTap: (){}, text: "Save"),
 
             ],
           ),

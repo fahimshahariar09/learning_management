@@ -39,7 +39,7 @@ class SignUp extends StatelessWidget {
                     controller.signupFun();
                     Get.to(const HomeScreen());
                   }
-                }, buttonName: "Sign Up"),
+                }, text: "Sign Up"),
               ],
             ),
           ),

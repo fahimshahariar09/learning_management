@@ -41,7 +41,7 @@ class SignIn extends StatelessWidget {
                         Get.to(const HomeScreen());
                       }
                     },
-                    buttonName: "Sign In"),
+                    text: "Sign In"),
               ],
             ),
           ),

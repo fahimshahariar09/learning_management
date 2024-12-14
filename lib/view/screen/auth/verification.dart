@@ -28,7 +28,7 @@ class Verification extends StatelessWidget {
                   CommonOtp(otpController: otpController.num3Controller),
                 ],
               ),
-              CustomButton(onTap: (){}, buttonName: "Contiune")
+              CustomButton(onTap: (){}, text: "Contiune")
             ],
           ),
         ),
