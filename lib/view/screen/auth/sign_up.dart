@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/auth/sign_up.dart';
-import 'package:learning_management/view/common_widget/common_button.dart';
+import 'package:learning_management/view/common_widget/custom_button.dart';
 import 'package:learning_management/view/screen/auth/widget/con_password_field.dart';
 import 'package:learning_management/view/screen/auth/widget/email_text_field.dart';
 import 'package:learning_management/view/screen/auth/widget/name_text_field.dart';
@@ -32,7 +32,7 @@ class SignUp extends StatelessWidget {
                 ConPasswordField(
                     conpasswordController: controller.conpasswordController),
                 const SizedBox(height: 10),
-                CommonButton(onTap: () {
+                CustomButton(onTap: () {
                   if (!controller.formKey.currentState!.validate()) {
                     return;
                   } else {

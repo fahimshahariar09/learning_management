@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/auth/new_password.dart';
-import 'package:learning_management/view/common_widget/common_button.dart';
+import 'package:learning_management/view/common_widget/custom_button.dart';
 import 'package:learning_management/view/screen/auth/widget/password_text_field.dart';
 
 class NewPassword extends StatelessWidget {
@@ -22,7 +22,7 @@ class NewPassword extends StatelessWidget {
               const SizedBox(height: 10),
               PasswordTextField(passwordController: controller.conpassword),
               const SizedBox(height: 10),
-              CommonButton(onTap: (){}, buttonName: "Save"),
+              CustomButton(onTap: (){}, buttonName: "Save"),
 
             ],
           ),

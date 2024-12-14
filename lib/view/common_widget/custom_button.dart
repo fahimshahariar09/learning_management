@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 
-class CommonButton extends StatelessWidget {
-  const CommonButton({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
     required this.onTap,
     required this.text,

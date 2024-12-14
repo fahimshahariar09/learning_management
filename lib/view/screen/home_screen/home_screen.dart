@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                   : const CircularProgressIndicator()),
               const Row(
                 children: [
-                  CustomTextWidget(titel: "Popular Courses"),
+                  CustomTextWidget(text: "Popular Courses"),
                 ],
               ),
               const SizedBox(height: 20),

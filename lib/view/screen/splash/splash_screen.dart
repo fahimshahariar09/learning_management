@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/constant/images.dart';
 import 'package:learning_management/controller/ui_controller/splash/splash.dart';
-import 'package:learning_management/view/common_widget/common_button.dart';
+import 'package:learning_management/view/common_widget/custom_button.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -31,8 +31,12 @@ class SplashScreen extends StatelessWidget {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                      const SizedBox(height: 10),
-                    CommonButton(onTap: (){},buttonWidth: 200, buttonName: "Get Started"),
+                    const SizedBox(height: 10),
+                    CustomButton(
+                      onTap: () {},
+                      buttonWidth: 200,
+                      text: "Get Started",
+                    ),
                   ],
                 ),
               ),

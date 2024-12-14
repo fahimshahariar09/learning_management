@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/auth/sign_in.dart';
-import 'package:learning_management/view/common_widget/common_button.dart';
+import 'package:learning_management/view/common_widget/custom_button.dart';
 import 'package:learning_management/view/screen/auth/widget/email_text_field.dart';
 import 'package:learning_management/view/screen/auth/widget/password_text_field.dart';
 import 'package:learning_management/view/screen/home_screen/home_screen.dart';
@@ -32,7 +32,7 @@ class SignIn extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 15),
-                CommonButton(
+                CustomButton(
                     onTap: () {
                       if (!controller.formKey.currentState!.validate()) {
                         return;
