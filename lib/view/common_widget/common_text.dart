@@ -10,7 +10,8 @@ class CommonText extends StatelessWidget {
       this.maxLine,
       this.fontSize,
       this.textAlign,
-      this.fontFamily});
+      this.fontFamily,
+      this.textLineThrough});
 
   final String text;
   final Color? fontColor;
@@ -20,17 +21,26 @@ class CommonText extends StatelessWidget {
   final int? maxLine;
   final TextAlign? textAlign;
   final String? fontFamily;
+  final bool? textLineThrough;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      titel,
+      text,
       style: TextStyle(
-          color: fColor ?? Colors.black,
-          fontWeight: fWeight ?? FontWeight.normal,
-          fontSize: fSize ?? 15,
+          decorationStyle: TextDecorationStyle.solid,
+          decorationColor: Colors.blue,
+          decoration: textLineThrough == true
+              ? TextDecoration.lineThrough
+              : TextDecoration.none,
+          color: fontColor ?? Colors.black,
+          fontWeight: fontWeight ?? FontWeight.normal,
+          fontSize: fontSize ?? 15,
+          decorationThickness: 2.1,
+          fontFamily: fontFamily ?? 'RobotoSerif',
           overflow: overflow ?? TextOverflow.ellipsis),
       maxLines: maxLine ?? 1,
+      textAlign: textAlign ?? TextAlign.start,
     );
   }
 }
