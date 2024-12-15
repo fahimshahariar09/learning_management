@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-class LocalData{
-
-  final storage = FlutterSecureStorage();
+class LocalData {
+  final storage = const FlutterSecureStorage();
 
   // Write Data in Local Storage
   writeData({required String key, required String value}) async {
@@ -39,5 +38,4 @@ class LocalData{
     await storage.deleteAll();
     debugPrint("All Local Data Deleted..!!");
   }
-
 }
