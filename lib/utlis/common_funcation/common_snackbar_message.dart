@@ -28,11 +28,10 @@ class CommonSnackBarMessage {
         snackPosition: SnackPosition.TOP);
   }
 
-  static successMessage() {
-    Get.snackbar("you a`re offline !!", "please check internet connection",
-        backgroundColor: Colors.red,
-        colorText: Colors.redAccent,
-        snackStyle: SnackStyle.FLOATING,
+  static successMessage({String? titel, required String text, IconData? icon}) {
+    Get.snackbar(titel ?? "Successful", text,
+        backgroundColor: Colors.blue.shade700,
+        colorText: Colors.white,
         duration: const Duration(seconds: 2),
         overlayBlur: 5,
         icon: const Icon(
