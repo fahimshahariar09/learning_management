@@ -1,5 +1,8 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:io';
+
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ProfileController extends GetxController{
   final formKey = GlobalKey<FormState>();
@@ -15,4 +18,8 @@ class ProfileController extends GetxController{
   RxBool languageBN = true.obs;
   RxBool themeLight = true.obs;
   RxBool isLoading = false.obs;
+  RxMap<dynamic,dynamic> userInfo = {}.obs;
+  ImageSource imageSource =ImageSource.camera;
+  late Rx<File?>  profileIMG = Rx<File?>(null);
+  final picker =ImagePicker();
 }
