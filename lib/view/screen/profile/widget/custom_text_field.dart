@@ -3,9 +3,13 @@ import 'package:learning_management/utlis/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {super.key, required this.controller, this.textInputType});
+      {super.key,
+      required this.controller,
+      this.textInputType,
+      required this.labelText});
 
   final TextEditingController controller;
+  final String labelText;
   final TextInputType? textInputType;
 
   @override
@@ -15,14 +19,16 @@ class CustomTextField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         keyboardType: textInputType ?? TextInputType.text,
-        decoration: const InputDecoration(
-          focusedBorder: OutlineInputBorder(
+        decoration: InputDecoration(
+          contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+          labelText: labelText,
+          focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: AppColors.bg1LightColor)),
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
               borderSide: BorderSide(color: AppColors.cardDarkColor)),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: AppColors.cardDarkColor)),
-          errorBorder: OutlineInputBorder(
+          errorBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: AppColors.cardDarkColor)),
         ),
         validator: (value) {

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/utlis/app_colors.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
+import 'package:learning_management/view/screen/profile/widget/custom_text_field.dart';
 
 class ChangePasswordSection extends StatelessWidget {
   const ChangePasswordSection({super.key});
@@ -15,7 +16,7 @@ class ChangePasswordSection extends StatelessWidget {
       child: SingleChildScrollView(
         child: Form(
           key: profileController.formKey,
-          child: const Column(
+          child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -34,6 +35,10 @@ class ChangePasswordSection extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 10),
+              CustomTextField(
+                controller: profileController.oldController,
+                labelText: '',
+              )
             ],
           ),
         ),
