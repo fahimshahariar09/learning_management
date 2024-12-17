@@ -32,7 +32,8 @@ class ChangePasswordSection extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   )
                 ],
-              )
+              ),
+              SizedBox(height: 10),
             ],
           ),
         ),
