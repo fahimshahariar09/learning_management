@@ -25,6 +25,12 @@ class CustomTextField extends StatelessWidget {
           errorBorder: OutlineInputBorder(
               borderSide: BorderSide(color: AppColors.cardDarkColor)),
         ),
+        validator: (value) {
+          if (value.toString() == "") {
+            return "Field can't be empty";
+          }
+          return null;
+        },
       ),
     );
   }
