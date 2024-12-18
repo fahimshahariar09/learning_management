@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:learning_management/controller/api_controller/auth/change_password.dart';
+import 'package:learning_management/controller/api_controller/profile_update.dart';
 import 'package:learning_management/controller/local_storage/local_storage.dart';
 import 'package:learning_management/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -62,6 +63,23 @@ class ProfileController extends GetxController {
         currentPass: oldPasswordController.text,
         newPass: newPasswordController.text,
         confPass: confPasswordController.text);
+    isLoading.value = false;
+    return status;
+  }
+
+  Future<bool> profileDeleteService() async {
+    isLoading.value = true;
+    await Future.delayed(const Duration(seconds: 2));
+    isLoading.value = false;
+    return true;
+  }
+
+  Future<bool> profileUpdateService() async {
+    isLoading.value = true;
+    bool status = await ProfileUpdateService.profileupdateService(
+        name: nameController.text,
+        address: addressController.text,
+        image: File(profileIMG.value?.path ?? ""));
     isLoading.value = false;
     return status;
   }
