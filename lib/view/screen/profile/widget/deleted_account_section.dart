@@ -5,6 +5,7 @@ import 'package:learning_management/utlis/app_colors.dart';
 import 'package:learning_management/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:learning_management/utlis/common_funcation/internet_connection_check.dart';
 import 'package:learning_management/view/common_widget/custom_button.dart';
+import 'package:learning_management/view/common_widget/custom_loading_button.dart';
 import 'package:learning_management/view/screen/profile/widget/custom_text_field.dart';
 
 class DeletedAccountSection extends StatelessWidget {
@@ -22,35 +23,37 @@ class DeletedAccountSection extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.account_circle,
                     color: AppColors.bg1LightColor,
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   CustomTextField(
                     controller: profileController.oldPasswordController,
                     labelText: "current_password",
                   ),
-                  SizedBox(height: 10),
-                  CustomButton(
-                      onTap: () async {
-                        FocusScope.of(context).unfocus();
-                        if (!profileController.formKey.currentState!
-                            .validate()) {
-                          return;
-                        }
-                        if (!await ConnectionChecker.checkConnection()) {
-                          CommonSnackBarMessage.noInternetConnection();
-                          return;
-                        }
-                        bool status =
-                            await profileController.profileDeleteService();
-                        if (status) {
-                          profileController.oldPasswordController.clear();
-                          Get.back();
-                        }
-                      },
-                      text: "deleted")
+                  const SizedBox(height: 10),
+                  Obx(() => profileController.isLoading.value
+                      ? const CustomLoadingButton()
+                      : CustomButton(
+                          onTap: () async {
+                            FocusScope.of(context).unfocus();
+                            if (!profileController.formKey.currentState!
+                                .validate()) {
+                              return;
+                            }
+                            if (!await ConnectionChecker.checkConnection()) {
+                              CommonSnackBarMessage.noInternetConnection();
+                              return;
+                            }
+                            bool status =
+                                await profileController.profileDeleteService();
+                            if (status) {
+                              profileController.oldPasswordController.clear();
+                              Get.back();
+                            }
+                          },
+                          text: "deleted"))
                 ],
               )
             ],
