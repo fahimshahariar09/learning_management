@@ -1,4 +1,3 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
@@ -51,7 +50,7 @@ class ChangePasswordSection extends StatelessWidget {
                 controller: profileController.confPasswordController,
                 labelText: 'conf_password',
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomButton(onTap: ()async{
                 FocusScope.of(context).unfocus();
                 if(!profileController.formKey.currentState!.validate()){
