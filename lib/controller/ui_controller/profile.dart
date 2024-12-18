@@ -4,7 +4,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:learning_management/controller/api_controller/auth/change_password.dart';
 import 'package:learning_management/controller/local_storage/local_storage.dart';
+import 'package:learning_management/utlis/common_funcation/common_snackbar_message.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class ProfileController extends GetxController {
@@ -41,15 +43,26 @@ class ProfileController extends GetxController {
     }
   }
 
-  getImage()async{
+  getImage() async {
     var status = await Permission.camera.request();
-    if(status.isGranted){
-      final pickedFile = await picker.pickImage(source: imageSource,imageQuality: 25);
-      if(pickedFile != null){
+    if (status.isGranted) {
+      final pickedFile =
+          await picker.pickImage(source: imageSource, imageQuality: 25);
+      if (pickedFile != null) {
         profileIMG.value = File(pickedFile.path);
       }
-    }else{
+    } else {
+      CommonSnackBarMessage.errorMessage(text: "gallery or camera permission");
     }
   }
 
+  Future<bool> changePasswordService() async {
+    isLoading.value = true;
+    bool status = await ChangePasswordService.changepasswordService(
+        currentPass: oldPasswordController.text,
+        newPass: newPasswordController.text,
+        confPass: confPasswordController.text);
+    isLoading.value = false;
+    return status;
+  }
 }
