@@ -13,9 +13,9 @@ class ProfileController extends GetxController {
   TextEditingController mailController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController addressController = TextEditingController();
-  TextEditingController oldController = TextEditingController();
-  TextEditingController newController = TextEditingController();
-  TextEditingController confController = TextEditingController();
+  TextEditingController oldPasswordController = TextEditingController();
+  TextEditingController newPasswordController = TextEditingController();
+  TextEditingController confPasswordController = TextEditingController();
   RxInt selectedTab = 0.obs;
   RxInt selectedOrderTab = 1.obs;
   RxBool languageBN = true.obs;

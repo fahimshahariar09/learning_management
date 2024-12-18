@@ -18,7 +18,7 @@ class ChangePasswordSection extends StatelessWidget {
           key: profileController.formKey,
           child: Column(
             children: [
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
@@ -34,11 +34,19 @@ class ChangePasswordSection extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomTextField(
                 controller: profileController.oldController,
-                labelText: '',
-              )
+                labelText: 'current_password',
+              ),
+              CustomTextField(
+                controller: profileController.oldController,
+                labelText: 'new_password',
+              ),
+              CustomTextField(
+                controller: profileController.confController,
+                labelText: 'conf_password',
+              ),
             ],
           ),
         ),
