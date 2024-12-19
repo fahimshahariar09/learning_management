@@ -1,4 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:learning_management/view/screen/profile/widget/change_password_section.dart';
+import 'package:learning_management/view/screen/profile/widget/setting_list_tile.dart';
 
 class ProfileSection extends StatelessWidget {
   const ProfileSection({super.key});
@@ -13,6 +15,11 @@ class ProfileSection extends StatelessWidget {
             children: [
               buildSizedBox(height: 10),
               //change password
+              SettingListTile(onTap: (){
+                showBottomSheet(context: context, builder: (builder){
+                  return ChangePasswordSection();
+                });
+              }, titel: "change_password")
 
             ],
           ),
