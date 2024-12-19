@@ -42,14 +42,27 @@ class CustomSwitch extends StatelessWidget {
                     ? AppColors.bg1LightColor
                     : AppColors.bgLightColor,
                 fontSize: 13,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
               ),
             ),
             Container(
               alignment: Alignment.center,
               height: 25,
               width: 30,
-              decoration: BoxDecoration(),
+              decoration: BoxDecoration(
+                  color: value.value == true
+                      ? AppColors.bg1LightColor
+                      : AppColors.bgLightColor,
+                  border: Border.all(color: Colors.transparent),
+                  borderRadius: BorderRadius.circular(5)),
+              child: CustomTextWidget(
+                text: offText,
+                fontColor: value.value == false
+                    ? AppColors.bg1LightColor
+                    : Theme.of(context).cardColor,
+                fontWeight: FontWeight.w600,
+                fontSize: 13,
+              ),
             )
           ],
         ),
