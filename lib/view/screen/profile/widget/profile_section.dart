@@ -82,7 +82,19 @@ class ProfileSection extends StatelessWidget {
       Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-
+          InkWell(
+            onTap: (){
+              Get.back();
+            },
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: 5),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: CustomTextWidget(text: "text"),
+            ),
+          )
         ],
       )
     ]
