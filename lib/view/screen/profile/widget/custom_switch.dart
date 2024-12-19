@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utlis/app_colors.dart';
+import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 
 class CustomSwitch extends StatelessWidget {
   const CustomSwitch(
@@ -35,6 +36,20 @@ class CustomSwitch extends StatelessWidget {
                       : Theme.of(context).cardColor,
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: Colors.transparent)),
+              child: CustomTextWidget(
+                text: onText,
+                fontColor: value.value == true
+                    ? AppColors.bg1LightColor
+                    : AppColors.bgLightColor,
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              height: 25,
+              width: 30,
+              decoration: BoxDecoration(),
             )
           ],
         ),
