@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/controller/local_storage/local_storage.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 import 'package:learning_management/view/screen/profile/widget/change_password_section.dart';
@@ -43,8 +44,14 @@ class ProfileSection extends StatelessWidget {
                     ),
                     CustomSwitch(
                       onTap: () {
-                        profileController.languageBN.value ? Get.updateLocale(const Locale('en','US')) : Get.updateLocale(const Locale('bn','BD'));
-                      },
+                        profileController.languageBN.value
+                            ? Get.updateLocale(const Locale('en', 'US'))
+                            : Get.updateLocale(const Locale('bn', 'BD'));
+                        profileController.languageBN.value
+                            ? LocalData()
+                            .writeData(key: 'languageType', value: 'EN')
+                            : LocalData()
+                            .writeData(key: 'languageType', value: 'BN');                      },
                       onText: "onText",
                       offText: "offText",
                     )
