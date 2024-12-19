@@ -70,9 +70,22 @@ class ProfileSection extends StatelessWidget {
     );
   }
 
-  Future<dynamic> buildLogOutDialog(){
+  Future<dynamic> buildLogOutDialog() {
     return Get.defaultDialog(
+        title: "confirmation",
+        titleStyle: const TextStyle(fontSize: 20, fontFamily: 'RobotoSerif'),
+        content: const CustomTextWidget(
+          text: "do you want to log out?",
+          fontSize: 16,
+        ),
+    actions: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
 
+        ],
+      )
+    ]
     );
   }
 
