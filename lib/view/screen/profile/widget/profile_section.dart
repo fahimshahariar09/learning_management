@@ -11,6 +11,8 @@ class ProfileSection extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
+              buildSizedBox(height: 10),
+              //change password
 
             ],
           ),
@@ -18,4 +20,9 @@ class ProfileSection extends StatelessWidget {
       ),
     );
   }
+
+  SizedBox buildSizedBox({double? height, double? width}) => SizedBox(
+        height: height,
+        width: width,
+      );
 }
