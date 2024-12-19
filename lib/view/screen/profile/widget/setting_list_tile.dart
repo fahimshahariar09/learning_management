@@ -15,6 +15,7 @@ class SettingListTile extends StatelessWidget {
         surfaceTintColor: Colors.transparent,
         shape: const OutlineInputBorder(borderSide: BorderSide.none),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CustomTextWidget(
               text: titel,

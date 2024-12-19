@@ -17,9 +17,20 @@ class ProfileSection extends StatelessWidget {
               //change password
               SettingListTile(onTap: (){
                 showBottomSheet(context: context, builder: (builder){
-                  return ChangePasswordSection();
+                  return const ChangePasswordSection();
                 });
-              }, titel: "change_password")
+              }, titel: "change_password"),
+              //change language
+              Card(
+                elevation: 4,
+                surfaceTintColor: Colors.transparent,
+                shape: OutlineInputBorder(borderSide: BorderSide.none),
+                child: Row(
+                  children: [
+
+                  ],
+                ),
+              )
 
             ],
           ),
