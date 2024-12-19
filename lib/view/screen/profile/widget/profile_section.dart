@@ -49,19 +49,30 @@ class ProfileSection extends StatelessWidget {
                             : Get.updateLocale(const Locale('bn', 'BD'));
                         profileController.languageBN.value
                             ? LocalData()
-                            .writeData(key: 'languageType', value: 'EN')
+                                .writeData(key: 'languageType', value: 'EN')
                             : LocalData()
-                            .writeData(key: 'languageType', value: 'BN');                      },
-                      onText: "onText",
-                      offText: "offText",
+                                .writeData(key: 'languageType', value: 'BN');
+                        profileController.languageBN.value =
+                            !profileController.languageBN.value;
+                      },
+                      onText: "EN",
+                      offText: "BN",
+                      value: profileController.languageBN,
                     )
                   ],
                 ),
-              )
+              ),
+              //log out
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Future<dynamic> buildLogOutDialog(){
+    return Get.defaultDialog(
+
     );
   }
 
