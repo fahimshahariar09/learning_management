@@ -4,6 +4,7 @@ import 'package:learning_management/controller/api_controller/auth/log_out.dart'
 import 'package:learning_management/controller/local_storage/local_storage.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
+import 'package:learning_management/view/screen/home_screen/home_screen.dart';
 import 'package:learning_management/view/screen/profile/widget/change_password_section.dart';
 import 'package:learning_management/view/screen/profile/widget/custom_switch.dart';
 import 'package:learning_management/view/screen/profile/widget/setting_list_tile.dart';
@@ -100,12 +101,26 @@ class ProfileSection extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: ()async{
+                onTap: () async {
                   var status = await LogOutService.logoutService();
-                  if(status){
+                  if (status) {
                     await LocalData().deleteData(key: "userInfo");
+                    await LocalData().deleteData(key: "token");
+                    Get.offAll(() => const HomeScreen());
                   }
                 },
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: const CustomTextWidget(
+                    text: "log out",
+                    fontColor: Colors.white,
+                  ),
+                ),
               )
             ],
           )
