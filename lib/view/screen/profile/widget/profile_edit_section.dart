@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 
 class ProfileEditSection extends StatelessWidget {
   const ProfileEditSection({super.key});
@@ -13,7 +14,15 @@ class ProfileEditSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-
+                CustomTextWidget(
+                  text: "profile edit",
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
+                SizedBox(height: 10),
+                InkWell(
+                  onTap: (){},
+                )
               ],
             )
           ],
