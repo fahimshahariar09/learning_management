@@ -7,6 +7,7 @@ import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 import 'package:learning_management/view/screen/home_screen/home_screen.dart';
 import 'package:learning_management/view/screen/profile/widget/change_password_section.dart';
 import 'package:learning_management/view/screen/profile/widget/custom_switch.dart';
+import 'package:learning_management/view/screen/profile/widget/log_out.dart';
 import 'package:learning_management/view/screen/profile/widget/setting_list_tile.dart';
 
 class ProfileSection extends StatelessWidget {
@@ -65,6 +66,10 @@ class ProfileSection extends StatelessWidget {
                 ),
               ),
               //log out
+              LogOut(onTap: ()async{
+                buildLogOutDialog();
+              },),
+              buildSizedBox(height: 10),
             ],
           ),
         ),
