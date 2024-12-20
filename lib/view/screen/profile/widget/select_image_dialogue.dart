@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/utlis/app_colors.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 
 class SelectImageDialogue extends StatelessWidget {
@@ -12,15 +13,28 @@ class SelectImageDialogue extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomTextWidget(
+        const CustomTextWidget(
           text: "Selected image",
           fontSize: 20,
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Row(
           children: [
             InkWell(
               onTap: cameraButton,
+              child: const Icon(
+                Icons.camera_alt,
+                size: 25,
+                color: AppColors.bg1LightColor,
+              ),
+            ),
+            InkWell(
+              onTap: galleryButton,
+              child: const Icon(
+                Icons.photo,
+                size: 25,
+                color: AppColors.bg1LightColor,
+              ),
             )
           ],
         )
