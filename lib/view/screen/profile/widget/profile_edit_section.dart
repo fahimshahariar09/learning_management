@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 
 class ProfileEditSection extends StatelessWidget {
@@ -6,6 +8,7 @@ class ProfileEditSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProfileController profileController = Get.put(ProfileController());
     return Padding(
       padding: const EdgeInsets.all(10),
       child: SingleChildScrollView(
