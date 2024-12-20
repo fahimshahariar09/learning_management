@@ -5,6 +5,20 @@ class ProfileEditSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

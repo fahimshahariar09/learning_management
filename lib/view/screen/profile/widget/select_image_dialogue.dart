@@ -11,34 +11,38 @@ class SelectImageDialogue extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CustomTextWidget(
-          text: "Selected image",
-          fontSize: 20,
-        ),
-        const SizedBox(height: 10),
-        Row(
-          children: [
-            InkWell(
-              onTap: cameraButton,
-              child: const Icon(
-                Icons.camera_alt,
-                size: 25,
-                color: AppColors.bg1LightColor,
+    return AlertDialog(
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const CustomTextWidget(
+            text: "Selected image",
+            fontSize: 20,
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              InkWell(
+                onTap: cameraButton,
+                child: const Icon(
+                  Icons.camera_alt,
+                  size: 25,
+                  color: AppColors.bg1LightColor,
+                ),
               ),
-            ),
-            InkWell(
-              onTap: galleryButton,
-              child: const Icon(
-                Icons.photo,
-                size: 25,
-                color: AppColors.bg1LightColor,
-              ),
-            )
-          ],
-        )
-      ],
+              InkWell(
+                onTap: galleryButton,
+                child: const Icon(
+                  Icons.photo,
+                  size: 25,
+                  color: AppColors.bg1LightColor,
+                ),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
