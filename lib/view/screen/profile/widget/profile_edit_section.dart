@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 
@@ -24,7 +25,10 @@ class ProfileEditSection extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {
+                    profileController.getImage(
+                        imageSource: ImageSource.gallery);
+                  },
                 )
               ],
             )

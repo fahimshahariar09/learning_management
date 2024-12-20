@@ -44,7 +44,7 @@ class ProfileController extends GetxController {
     }
   }
 
-  getImage() async {
+  getImage({required ImageSource imageSource}) async {
     var status = await Permission.camera.request();
     if (status.isGranted) {
       final pickedFile =
