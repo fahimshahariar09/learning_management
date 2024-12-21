@@ -89,12 +89,18 @@ class ProfileScreen extends StatelessWidget {
                             fontSize: 15,
                           ),
                           CustomTextWidget(
-                            text: "${profileController.userInfo["phone"]}",
-                            fontWeight: FontWeight.w300,
-                            fontColor: Colors.white,
-                            fontSize: 14,
-                          )
+                              text: "${profileController.userInfo["phone"]}",
+                              fontWeight: FontWeight.w300,
+                              fontColor: Colors.white,
+                              fontSize: 14)
                         ],
+                      ),
+                      CustomTextWidget(
+                        text:
+                            "${profileController.userInfo["address"] ?? "empty address"}",
+                        fontSize: 14,
+                        fontColor: Colors.white,
+                        fontWeight: FontWeight.w400,
                       )
                     ],
                   ),
