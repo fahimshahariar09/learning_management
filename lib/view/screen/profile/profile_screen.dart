@@ -96,15 +96,22 @@ class ProfileScreen extends StatelessWidget {
                         ],
                       ),
                       CustomTextWidget(
-                        text:
-                            "${profileController.userInfo["address"] ?? "empty address"}",
-                        fontSize: 14,
-                        fontColor: Colors.white,
-                        fontWeight: FontWeight.w400,
-                      )
+                          text:
+                              "${profileController.userInfo["address"] ?? "empty address"}",
+                          fontSize: 14,
+                          fontColor: Colors.white,
+                          fontWeight: FontWeight.w400)
                     ],
                   ),
-                )
+                ),
+                Positioned(
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.edit_note_sharp,
+                          size: 35,
+                          color: Colors.white,
+                        )))
               ],
             )
           ],
