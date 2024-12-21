@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/utlis/app_colors.dart';
+import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 import 'package:learning_management/view/common_widget/image_view_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -64,6 +65,20 @@ class ProfileScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 10),
+                      CustomTextWidget(
+                        text:
+                            "${profileController.userInfo["name"] ?? "please update your name"}",
+                        fontWeight: FontWeight.w500,
+                        fontColor: Colors.white,
+                        fontSize: 20,
+                      ),
+                      CustomTextWidget(
+                        text:
+                            "${profileController.userInfo["email"] ?? "empty email"}",
+                        fontColor: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                      )
                     ],
                   ),
                 )
