@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
+import 'package:learning_management/utlis/app_colors.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -19,7 +20,14 @@ class ProfileScreen extends StatelessWidget {
                 Container(
                   alignment: Alignment.center,
                   width: size.width,
-                  padding: EdgeInsets.only(top: 70, bottom: 20),
+                  padding: const EdgeInsets.only(top: 70, bottom: 20),
+                  decoration: const BoxDecoration(
+                    color: AppColors.bg1LightColor,
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20)
+                    )
+                  ),
                 )
               ],
             )
