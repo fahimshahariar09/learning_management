@@ -37,17 +37,17 @@ class ProfileEditSection extends StatelessWidget {
                   },
                   child: Column(
                     children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundColor: Colors.grey,
-                        backgroundImage: profileController.profileIMG.value ==
-                                null
-                            ? NetworkImage(
-                                "${profileController.userInfo['profile_image'] ?? ""}")
-                            : FileImage(File(
-                                    profileController.profileIMG.value!.path))
-                                as ImageProvider,
-                      ),
+                      Obx(() => CircleAvatar(
+                            radius: 40,
+                            backgroundColor: Colors.grey,
+                            backgroundImage: profileController
+                                        .profileIMG.value ==
+                                    null
+                                ? NetworkImage(
+                                    "${profileController.userInfo['profile_image'] ?? ""}")
+                                : FileImage(File(profileController
+                                    .profileIMG.value!.path)) as ImageProvider,
+                          )),
                       const CustomTextWidget(
                         text: "Tap to Change image",
                         fontSize: 11,
@@ -68,12 +68,13 @@ class ProfileEditSection extends StatelessWidget {
                 CustomButton(
                   onTap: () async {
                     FocusScope.of(context).unfocus();
-                    if(!await ConnectionChecker.checkConnection()){
+                    if (!await ConnectionChecker.checkConnection()) {
                       CommonSnackBarMessage.noInternetConnection();
-                      return ;
+                      return;
                     }
-                    bool status = await profileController.profileUpdateService();
-                    if(status){
+                    bool status =
+                        await profileController.profileUpdateService();
+                    if (status) {
                       await profileController.getProfileInfo();
                       Get.back();
                     }
