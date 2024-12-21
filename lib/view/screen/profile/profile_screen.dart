@@ -49,14 +49,21 @@ class ProfileScreen extends StatelessWidget {
                               child: FadeInImage.assetNetwork(
                                 height: 100,
                                 width: 100,
+                                fit: BoxFit.cover,
                                 placeholder: "",
                                 image:
                                     "${profileController.userInfo["profile_image"] ?? ''}",
+                                imageErrorBuilder: (context, o, t) {
+                                  return const CircleAvatar(
+                                    backgroundImage: NetworkImage("url"),
+                                  );
+                                },
                               ),
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      const SizedBox(height: 10),
                     ],
                   ),
                 )
