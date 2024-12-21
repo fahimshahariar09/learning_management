@@ -42,7 +42,19 @@ class ProfileScreen extends StatelessWidget {
                           );
                         },
                         child: SizedBox(
-
+                          height: 100,
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: ClipOval(
+                              child: FadeInImage.assetNetwork(
+                                height: 100,
+                                width: 100,
+                                placeholder: "",
+                                image:
+                                    "${profileController.userInfo["profile_image"] ?? ''}",
+                              ),
+                            ),
+                          ),
                         ),
                       )
                     ],
