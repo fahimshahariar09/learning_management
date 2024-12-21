@@ -78,6 +78,23 @@ class ProfileScreen extends StatelessWidget {
                         fontColor: Colors.white,
                         fontWeight: FontWeight.w500,
                         fontSize: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const CustomTextWidget(
+                            text: "phone",
+                            fontColor: Colors.white,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 15,
+                          ),
+                          CustomTextWidget(
+                            text: "${profileController.userInfo["phone"]}",
+                            fontWeight: FontWeight.w300,
+                            fontColor: Colors.white,
+                            fontSize: 14,
+                          )
+                        ],
                       )
                     ],
                   ),
