@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
+import 'package:learning_management/utlis/common_funcation/common_snackbar_message.dart';
+import 'package:learning_management/utlis/common_funcation/internet_connection_check.dart';
+import 'package:learning_management/view/common_widget/custom_button.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 import 'package:learning_management/view/screen/profile/widget/custom_text_field.dart';
 
@@ -60,6 +63,23 @@ class ProfileEditSection extends StatelessWidget {
                 CustomTextField(
                   controller: profileController.addressController,
                   labelText: "address",
+                ),
+                const SizedBox(height: 10),
+                CustomButton(
+                  onTap: () async {
+                    FocusScope.of(context).unfocus();
+                    if(!await ConnectionChecker.checkConnection()){
+                      CommonSnackBarMessage.noInternetConnection();
+                      return ;
+                    }
+                    bool status = await profileController.profileUpdateService();
+                    if(status){
+                      await profileController.getProfileInfo();
+                      Get.back();
+                    }
+                  },
+                  text: "edit",
+                  buttonWidth: 150,
                 )
               ],
             )
