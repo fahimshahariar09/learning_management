@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
+import 'package:learning_management/view/screen/profile/widget/custom_text_field.dart';
 
 class ProfileEditSection extends StatelessWidget {
   const ProfileEditSection({super.key});
@@ -20,12 +21,12 @@ class ProfileEditSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomTextWidget(
+                const CustomTextWidget(
                   text: "profile edit",
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 InkWell(
                   onTap: () {
                     profileController.getImage(
@@ -43,9 +44,22 @@ class ProfileEditSection extends StatelessWidget {
                             : FileImage(File(
                                     profileController.profileIMG.value!.path))
                                 as ImageProvider,
-                      )
+                      ),
+                      const CustomTextWidget(
+                        text: "Tap to Change image",
+                        fontSize: 11,
+                      ),
                     ],
                   ),
+                ),
+                const SizedBox(height: 10),
+                CustomTextField(
+                  controller: profileController.nameController,
+                  labelText: "name",
+                ),
+                CustomTextField(
+                  controller: profileController.addressController,
+                  labelText: "address",
                 )
               ],
             )
