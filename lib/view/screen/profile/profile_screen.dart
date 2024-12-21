@@ -4,6 +4,7 @@ import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/utlis/app_colors.dart';
 import 'package:learning_management/view/common_widget/custom_text_widget.dart';
 import 'package:learning_management/view/common_widget/image_view_widget.dart';
+import 'package:learning_management/view/screen/profile/widget/profile_edit_section.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -106,7 +107,13 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 Positioned(
                     child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          showBottomSheet(
+                              context: context,
+                              builder: (builder) {
+                                return const ProfileEditSection();
+                              });
+                        },
                         icon: const Icon(
                           Icons.edit_note_sharp,
                           size: 35,
