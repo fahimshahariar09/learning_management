@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/controller/ui_controller/profile.dart';
 import 'package:learning_management/utlis/app_colors.dart';
+import 'package:learning_management/view/common_widget/image_view_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -25,8 +26,26 @@ class ProfileScreen extends StatelessWidget {
                     color: AppColors.bg1LightColor,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20)
-                    )
+                      bottomRight: Radius.circular(20),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.to(
+                            () => ImageViewWidget(
+                              imageUrl:
+                                  "${profileController.userInfo["profile_image"] ?? ''}",
+                            ),
+                          );
+                        },
+                        child: SizedBox(
+
+                        ),
+                      )
+                    ],
                   ),
                 )
               ],
