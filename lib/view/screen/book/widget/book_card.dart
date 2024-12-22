@@ -25,7 +25,7 @@ class BookCard extends StatelessWidget {
               Image.asset(image),
               Text(name),
               Text(titel),
-              Icon(
+              const Icon(
                 Icons.star,
                 size: 5,
               ),
