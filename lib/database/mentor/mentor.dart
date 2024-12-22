@@ -1,3 +1,3 @@
 class MentorList {
-  static
+  static Map<String, dynamic> mentorlist = {'mentor': []};
 }
