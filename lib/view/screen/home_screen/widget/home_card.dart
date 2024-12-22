@@ -31,7 +31,10 @@ class HomeCard extends StatelessWidget {
                 Text(name),
               ],
             ),
-            Text(tk),
+            Container(
+                height: 20,
+                decoration: BoxDecoration(color: Colors.blue.shade700),
+                child: Text(tk)),
           ],
         ),
       ),
