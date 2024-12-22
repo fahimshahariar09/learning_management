@@ -1,10 +1,12 @@
 class MentorList {
-  static Map<String, dynamic> mentorlist = {'mentor': [
-    {"image": "", "name": "Lisa Rahman", "titel": "UI/UX Design"},
-    {"image": "", "name": "Charli Fallon", "titel": "React"},
-    {"image": "", "name": "Jennifer", "titel": "Java"},
-    {"image": "", "name": "Susan James", "titel": "Python"},
-    {"image": "", "name": "Jennifer", "Rifat": "Flutter"},
-    {"image": "", "name": "Jennifer", "Edward Odell": "Node js"},
-  ]};
+  static Map<String, dynamic> mentorlist = {
+    'mentor': [
+      {"image": "", "name": "William Harris", "titel": "C++"},
+      {"image": "", "name": "Sylvia", "titel": "PHP"},
+      {"image": "", "name": "Eric Brann", "titel": "CCNA"},
+      {"image": "", "name": "Jessie William", "titel": "Angular"},
+      {"image": "", "name": "Pamela", "Rifat": "Core Jeva"},
+      {"image": "", "name": "Maria Smith", "Edward Odell": "C Program"},
+    ]
+  };
 }
