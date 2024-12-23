@@ -17,15 +17,15 @@ class HomeScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-               ListTile(
+               const ListTile(
                 leading: CircleAvatar(),
                 title: Text("Rumi Aktar"),
                 subtitle: Text("Let’s learn something new"),
                 trailing: Icon(Icons.add_alert_sharp),
               ),
-               SizedBox(height: 10),
-               CommonSearchBar(),
-               SizedBox(height: 20),
+               const SizedBox(height: 10),
+               const CommonSearchBar(),
+               const SizedBox(height: 20),
               Obx(() => homeController.isLoading.isFalse
                   ? Expanded(
                       child: GridView.builder(
