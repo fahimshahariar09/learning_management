@@ -28,25 +28,28 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 15),
               Obx(() => homeController.isLoading.isFalse
                   ? Expanded(
-                      child: GridView.builder(
-                        itemCount: homeController.categoryList.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3,
-                        ),
-                        itemBuilder: (context, index) {
-                          return Column(
-                            children: [
-                              Image.asset(
-                                  "${homeController.categoryList[index].images}"),
-                              const SizedBox(height: 5),
-                              Text(
-                                  "${homeController.categoryList[index].name}"),
-                            ],
-                          );
-                        },
+                    child: GridView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: homeController.categoryList.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3,
+                            mainAxisSpacing: 5,
+                            childAspectRatio: 1.5,
                       ),
-                    )
+                      itemBuilder: (context, index) {
+                        return Column(
+                          children: [
+                            Image.asset(
+                                "${homeController.categoryList[index].images}"),
+                            const SizedBox(height: 5),
+                            Text(
+                                "${homeController.categoryList[index].name}"),
+                          ],
+                        );
+                      },
+                    ),
+                  )
                   : const CircularProgressIndicator()),
               const Row(
                 children: [
@@ -58,6 +61,7 @@ class HomeScreen extends StatelessWidget {
                 () => homeController.isLoading.isFalse
                     ? Expanded(
                         child: GridView.builder(
+                          physics: NeverScrollableScrollPhysics(),
                           itemCount: homeController.coursesList.length,
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
