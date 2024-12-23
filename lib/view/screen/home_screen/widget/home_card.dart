@@ -16,8 +16,8 @@ class HomeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        height: 100,
-        width: 100,
+        height: 90,
+        width: 90,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: Colors.red,

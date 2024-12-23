@@ -48,21 +48,20 @@ class HomeScreen extends StatelessWidget {
                       ),
                     )
                   : const CircularProgressIndicator()),
-               const Row(
+              const Row(
                 children: [
                   CustomTextWidget(text: "Popular Courses"),
                 ],
               ),
               const SizedBox(height: 20),
               Obx(
-                () => homeController.isLoading.isTrue
+                () => homeController.isLoading.isFalse
                     ? Expanded(
                         child: GridView.builder(
                           itemCount: homeController.coursesList.length,
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                          ),
+                                  crossAxisCount: 2, mainAxisSpacing: 2),
                           itemBuilder: (context, index) {
                             return HomeCard(
                                 image:
