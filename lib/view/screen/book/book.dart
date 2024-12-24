@@ -22,11 +22,11 @@ class Book extends StatelessWidget {
           const CommonSearchBar(),
           const SizedBox(height: 10),
           const Text("Top Mentor"),
-          Obx(() => bookController.isLoading.isFalse
-              ? CircularProgressIndicator()
+          Obx(() => bookController.isLoading.isTrue
+              ? const CircularProgressIndicator()
               : Expanded(
                   child: GridView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: bookController.topmentorlist.length,
                     gridDelegate:
@@ -34,7 +34,6 @@ class Book extends StatelessWidget {
                       crossAxisCount: 3,
                     ),
                     itemBuilder: (context, index) {
-                      print("gjuhjhj");
                       return BookCard(
                         image: "${bookController.topmentorlist[index].image}",
                         name: "${bookController.topmentorlist[index].name}",
