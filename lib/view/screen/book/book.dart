@@ -9,7 +9,7 @@ class Book extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    BookController bookController =Get.put(BookController());
+    BookController bookController = Get.put(BookController());
     return Scaffold(
       body: Column(
         children: [
@@ -29,7 +29,11 @@ class Book extends StatelessWidget {
                 crossAxisCount: 3,
               ),
               itemBuilder: (context, index) {
-                return BookCard(image: "${}", name: name, titel: titel);
+                return BookCard(
+                  image: "${bookController.topmentorlist[index].image}",
+                  name: "${bookController.topmentorlist[index].name}",
+                  titel: "${bookController.topmentorlist[index].titel}",
+                );
               },
             ),
           ),
