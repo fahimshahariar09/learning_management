@@ -34,6 +34,7 @@ class Book extends StatelessWidget {
                       crossAxisCount: 3,
                     ),
                     itemBuilder: (context, index) {
+                      print("gjuhjhj");
                       return BookCard(
                         image: "${bookController.topmentorlist[index].image}",
                         name: "${bookController.topmentorlist[index].name}",
