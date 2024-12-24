@@ -20,16 +20,25 @@ class BookCard extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Column(
-            children: [
-              Image.asset(image),
-              Text(name),
-              Text(titel),
-              const Icon(
-                Icons.star,
-                size: 5,
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 22,
+                  backgroundImage: AssetImage(image),
+                ),
+                const SizedBox(height: 5),
+                Text(name),
+                const SizedBox(height: 3),
+                Text(titel),
+                const SizedBox(height: 5),
+                const Icon(
+                  Icons.star,
+                  size: 10,
+                ),
+              ],
+            ),
           )),
     );
   }
