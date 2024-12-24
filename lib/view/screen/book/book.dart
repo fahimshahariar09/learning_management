@@ -22,21 +22,26 @@ class Book extends StatelessWidget {
           const CommonSearchBar(),
           const SizedBox(height: 10),
           const Text("Top Mentor"),
-          Expanded(
-            child: GridView.builder(
-              itemCount: bookController.topmentorlist.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-              ),
-              itemBuilder: (context, index) {
-                return BookCard(
-                  image: "${bookController.topmentorlist[index].image}",
-                  name: "${bookController.topmentorlist[index].name}",
-                  titel: "${bookController.topmentorlist[index].titel}",
-                );
-              },
-            ),
-          ),
+          Obx(() => bookController.isLoading.isFalse
+              ? CircularProgressIndicator()
+              : Expanded(
+                  child: GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: bookController.topmentorlist.length,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                    ),
+                    itemBuilder: (context, index) {
+                      return BookCard(
+                        image: "${bookController.topmentorlist[index].image}",
+                        name: "${bookController.topmentorlist[index].name}",
+                        titel: "${bookController.topmentorlist[index].titel}",
+                      );
+                    },
+                  ),
+                )),
         ],
       ),
     );
