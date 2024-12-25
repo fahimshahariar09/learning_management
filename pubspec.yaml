@@ -70,6 +70,7 @@ flutter:
   assets:
     - asset/image/
     - asset/icon/
+    - asset/mentor/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
