@@ -31,11 +31,10 @@ class Book extends StatelessWidget {
                     itemCount: bookController.topmentorlist.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3,
-                          mainAxisSpacing: 7,
-                          crossAxisSpacing: 10,
-                          childAspectRatio: 1.2
-                    ),
+                            crossAxisCount: 3,
+                            mainAxisSpacing: 7,
+                            crossAxisSpacing: 10,
+                            childAspectRatio: 1.2),
                     itemBuilder: (context, index) {
                       return BookCard(
                         image: "${bookController.topmentorlist[index].image}",
@@ -45,6 +44,9 @@ class Book extends StatelessWidget {
                     },
                   ),
                 )),
+          SizedBox(height: 10),
+          Text("Mentor"),
+          GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3), itemBuilder: (context,index){return Column();}
         ],
       ),
     );
