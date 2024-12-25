@@ -17,17 +17,17 @@ class TopMentorList {
         "titel": "Java"
       },
       {
-        "image": "asset/image/python.png",
+        "image": "asset/mentor/susan.png",
         "name": "Susan James",
         "titel": "Python"
       },
       {
-        "image": "asset/image/flutter.png",
-        "name": "Jennifer",
+        "image": "asset/mentor/kathleen.png",
+        "name": "Kathleen",
         "titel": "Flutter"
       },
       {
-        "image": "asset/image/node.png",
+        "image": "asset/mentor/odell.png",
         "name": "Edward Odell",
         "titel": "Node js"
       },
