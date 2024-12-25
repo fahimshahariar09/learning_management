@@ -65,7 +65,9 @@ class HomeScreen extends StatelessWidget {
                           itemCount: homeController.coursesList.length,
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2, mainAxisSpacing: 2),
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 2,
+                          ),
                           itemBuilder: (context, index) {
                             return HomeCard(
                                 image:
