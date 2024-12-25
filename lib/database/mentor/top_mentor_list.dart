@@ -2,16 +2,20 @@ class TopMentorList {
   static Map<String, dynamic> topmentorList = {
     "topmentor": [
       {
-        "image": "asset/image/ux_ui.png",
+        "image": "asset/mentor/lisa.png",
         "name": "Lisa Rahman",
         "titel": "UI/UX Design"
       },
       {
-        "image": "asset/image/react.png",
+        "image": "asset/mentor/charli.png",
         "name": "Charli Fallon",
         "titel": "React"
       },
-      {"image": "asset/image/java.png", "name": "Jennifer", "titel": "Java"},
+      {
+        "image": "asset/mentor/jennifer.png",
+        "name": "Jennifer",
+        "titel": "Java"
+      },
       {
         "image": "asset/image/python.png",
         "name": "Susan James",
