@@ -44,8 +44,8 @@ class Book extends StatelessWidget {
                     },
                   ),
                 )),
-          SizedBox(height: 10),
-          Text("Mentor"),
+          const SizedBox(height: 10),
+          const Text("Mentor"),
           // GridView.builder(
           //     gridDelegate:
           //         SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
